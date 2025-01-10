@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DY3T202NLN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DY3T202NLN');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5S3LPRSG');</script>
+<!-- End Google Tag Manager -->
+
+
+	    <meta charset="utf-8">
+		<title>SiirenCare</title> 
+		<!-- Latest compiled and minified CSS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Frank+Ruhl+Libre&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+			
+			
+	<style type="text/css">											
+				body {							/*alles im body sieht so aus*/
+					font-family: "Domine", serif;
+					background-color: #F1D8D0;
+					margin: 0;
+					padding: 0;
+					height: 100%;
+				}
+
+				button {
+    background-color: transparent; /* Entfernt die Hintergrundfarbe */
+    border: none; /* Entfernt den Rahmen */
+    padding: 0; /* Entfernt den Innenabstand */
+    cursor: pointer; /* Zeigt den Zeiger für klickbare Elemente an */
+}
+
+/*----------------------------------------------------------------------------------*/
+				/*Header mit logo*/
+
+				header{							/*grüner bereich oben*/
+					background: #c9e2b3;
+					padding: 10px ;
+				}
+
+				.mitte{ 						/*alles mit mitte wird so ausgerichtet*/
+				display: flex;
+				justify-content: center;
+				align-items: center;	
+				text-align: center;										
+				}
+
+				#Warenkorb{
+					position: absolute;
+					top: 4%; 							/* Vertikal ausrichten */
+   					right: 70px; 						/* Abstand vom rechten Rand */
+				}
+
+
+
+			
+/*----------------------------------------------------------------------------------*/
+				/*Navigation*/
+
+
+				nav a{
+					position: relative;					
+					top: 0px;
+					padding-right: 20px;				
+				}
+
+				
+
+				nav a::after {							/*Pfeile*/
+            	content: "▼";
+            	font-size: 12px;
+            	margin-left: 5px;
+            	position: absolute;
+            	right: 30;
+            	top: 50%;
+            	transform: translateY(-50%);
+        		}
+
+
+
+				/*Dropdown gesamte box jeweils*/
+				.dropdown-menu {
+					border: none;
+
+				    display: none; 
+				    position: absolute;
+				    top: 100%; 
+				    left: 50%; 
+
+				    padding: 0;
+				    margin: 0;
+				    list-style: none; /* Keine Punkte in der Liste */
+				    transform: translateX(-50%);
+				    text-align: center;
+
+				}
+
+				/* Hover beim dropdown */
+				.dropdown:hover .dropdown-menu {
+				    display: block; 
+				}
+
+				/*Unterpunkte der navigation des dropdowns */
+				.dropdown-menu li a {
+				    text-decoration: none;
+				     background-color: pink;
+
+				    padding: 10px 15px; /* Klickfläche erhöhen */
+				    display: block;
+				}
+				/*Damit der Pfeil bei den Unterpunkten entfernt wird*/
+				.dropdown-menu li a::after {
+				    content: none; 
+				}
+
+				.dropdown-menu li a:hover {
+				    background-color: lightgrey; 
+				  
+				}
+   
+
+
+
+/*----------------------------------------------------------------------------------*/
+				
+				/*Banner mit Video und Text*/
+
+				#video{							/*Werbevideo*/
+					width: 100%;
+					height: 1200px;
+				}
+
+				#video video{						/*Format vom video*/
+					width: 100%;
+					height: 50%;
+					object-fit: cover;
+				}
+
+				#banner {     					/*Call to action auf dem bild*/                                                                 
+            		padding-bottom: 5px;
+            		position: absolute;
+  					top: 50%;
+  					left: 80%;
+  					transform: translate(-50%, -50%);
+ 	 				z-index: 1;
+  					color: white;
+  					font-size: 20px;
+  					font-weight: bold;
+
+        		}
+
+
+        
+        		#banner h1 {						/*call to action schrift auf dem bild*/
+            		margin: 20px 0;
+            		font-size: 50px;
+            		color: white;
+            		font-size: 45px; 
+				   
+				    margin-bottom: 40px;
+
+
+        		}
+
+        		#banner button {					/*aussehen vom button*/
+            		background-color: #f59cb4;
+            		border: none;
+            		color: white;
+            		padding: 10px 20px;
+           	 		cursor: pointer;
+            		border-radius: 5px;
+        		}
+
+        		#banner button:hover {      			/*hover effekt auf dem button*/                                            
+            		background-color: #d97994;
+        		}
+
+        		#video{
+        		
+        		
+
+        		}
+ /*----------------------------------------------------------------------------------*/       		
+
+        		/*Bilder der Produkte*/
+
+        		#ZweiSplaten{
+
+        			margin-bottom: 50px;
+        		
+        		}
+
+        		section h1{									/*Überschrift Unsere Produkte*/
+        	
+        			margin-bottom: 40px;
+
+        		}
+
+    
+
+        		#shampoo{									/*Bild vom Shampoo*/
+        		position: relative;
+        		left: 70px;
+        		text-align: center;
+				margin-right: 20%;
+				margin-top: 40px;
+
+				margin-bottom: 40px;
+        		}
+        		
+
+        		#img-shampoo{							/*Bild vom Shampoo*/
+        			width: 70%;
+        			margin-right: -40px;
+        		}
+
+
+
+        		#conditioner{							/*Bild vom Conditioner*/							
+        		position: relative;
+        		left: -10px;
+        		text-align: right;
+				margin-right: 20%;
+				margin-top: 40px;
+				margin-bottom: 40px;
+        		}
+
+        		#img-conditioner{						/*Bild vom Conditioner*/
+        			width: 70%;
+        		}
+
+        		
+
+
+        		#ZweiSpalten h1{					/*Überschrift Produkte: Shampoo und Conditioner */
+        			text-align: center;
+        			
+        			margin-top: 40px; 
+        			margin-bottom: 3px;	
+        		}
+
+        	
+
+
+				#ZweiSpalten p{						/*Anordnung des 350ml Cherryblossom text */
+        			text-align: center;
+        			
+        			margin-bottom: 0px;
+        		}
+
+
+
+        		#LinksTexte{						/*Box aus allen texten und icon unter dem Bild*/
+        			margin-left: 40px;
+        			text-align: center;
+        		}
+
+        		#links{
+        			right: 70px;
+        		}
+
+        		#RechtsTexte{						/*Box aus allen texten und icon unter dem Bild*/	
+        			margin-left: 140px;
+        		}
+
+        		#RechtsTexte p{
+        			text-align: center; /* Zentriert alle Texte */
+        		}
+
+        		#LinksTexte, #RechtsTexte {
+    			text-align: center; /* Zentriert alle Texte */
+    
+				}
+
+
+
+
+
+        		.bagicon{							/*Position der beiden einkaufstaschen icons*/
+        		
+    				border-radius: 50%; 			/* Macht das Element rund */
+
+    				position: absolute;
+					top: 80%; 							/* Vertikal ausrichten */
+   					right: 0px; 						/* Abstand vom rechten Rand */	
+        		}
+
+        		
+
+        		.Textundicon img:hover{      			/*hover effekt auf dem button*/                                            
+            		background-color: #d97994;
+            		opacity: 0.7;
+        		}
+
+
+        			
+        		.product-navigation {					/*Pfeile*/  
+   				display: flex;
+   				align-items: center; 					/* Zentriert die Pfeile vertikal */
+   				justify-content: space-between; 		/* Pfeile links und rechts */
+    			position: relative;
+    			width: 100%; 							/* Breite des Containers */
+				}
+
+				.arrow {
+			    position: absolute;
+			    top: -350px;
+			    transform: translateY(-50%);		 /* Korrigiert die Zentrierung */
+			    width: 30px; 						/* Größe der Pfeile */
+			    cursor: pointer;
+			     z-index: 10; 						/* Bringt die Pfeile in den Vordergrund */
+
+				}
+
+				.left-arrow {						/*Pfeil links*/
+				    left: 10px; 					/* Abstand zum linken Rand */
+				}
+
+				.right-arrow {						/*Pfeil rechts*/
+				    right: 10px; 					/* Abstand zum rechten Rand */
+				}
+
+   		
+/*----------------------------------------------------------------------------------------------------*/
+        		
+
+        		/*Produkt benefits*/
+
+        	
+        		#Benefits h1{
+        			margin-bottom: 10px;
+        			margin-top: 70px;
+        		}
+
+        		#DreiSpalten {
+        			background-color: pink;
+        			position: relative;
+				    display: flex;						/* drei Spalten nebeneinander zu platzieren */
+				    justify-content: center; 			/* Zentriert die Bilder horizontal */
+				    align-items: center;    			/* Zentriert die Bilder vertikal */
+				    flex-wrap: wrap;       				 
+			  		flex: 1; 									/* Jede Spalte nimmt den gleichen Platz ein */
+			  		text-align: center;
+					justify-content: center;
+					padding-bottom: 100px;
+					margin-top: 200px; /* Fügt oben Abstand hinzu */
+
+					}
+
+				
+        		#DreiSpalten img {
+	        		flex-basis: 32%;
+	        		border-radius: 50px;
+	        		margin-bottom: 30px;
+	        		
+	        		overflow: hidden;
+	        		margin: 0 10px; /* Abstand von 10px nach links und rechts */
+	        		margin-top: 100px;
+
+	        		max-width: 300px;
+	    			height: 700px; 
+	    			object-fit: cover
+
+
+        		}
+				
+/*----------------------------*/
+        		
+				/*Buttons auf den Bildern*/
+				.centered-button {
+				   
+				  
+				    background-color: rgba(255, 255, 255, 0.8); 		/* Weiße Hintergrundfarbe mit Transparenz */
+				    border: none; 										/* Entfernt Rahmen */
+				    padding: 10px 20px; 								/* Innenabstand für den Button */
+				    border-radius: 50px; 								/* Runde Ecken */
+				    font-size: 30px;
+				    color: black;										 /* Schriftfarbe */
+				    display: flex;
+				}
+
+        																	
+				.centered-button:hover {								/* Hover-Effekt */
+				    background-color: rgba(0, 0, 0, 0.8);
+				    color: white;
+				}
+
+				#Nachhaltig button{
+
+					position: absolute; 								/* Button wird relativ zum Container positioniert */
+				    top: 80%; 											/* Zentriert den Button vertikal */
+				    left: 19%; 											/* Zentriert den Button horizontal */
+				    transform: translate(-50%, -50%); 					/* Korrigiert die Zentrierung */
+
+
+				}
+
+				#Tierversuchsfrei button{
+
+					position: absolute; 								/* Button wird relativ zum Container positioniert */
+					justify-content: center;
+				    top: 80%; 											/* Zentriert den Button vertikal */
+				    left: 50%; 											/* Zentriert den Button horizontal */
+				    transform: translate(-50%, -50%); 					/* Korrigiert die Zentrierung */
+
+
+				}
+
+				#Pflegend button{
+
+					position: absolute; 								/* Button wird relativ zum Container positioniert */
+				    top: 80%; 											/* Zentriert den Button vertikal */
+				    left: 81%;											/* Zentriert den Button horizontal */
+				    transform: translate(-50%, -50%); 					/* Korrigiert die Zentrierung */
+
+
+				}
+
+/*----------------------------------------------------------------------------------------------------*/
+        		
+        		/*Über uns Beschreibung*/
+
+				#Überuns{
+        			padding: 180px;
+            		text-align: center;
+            		margin-top: -50px;
+
+        		}
+
+        		.mitte #Überuns h1{
+        			margin-bottom: 30px; /*abstand überschrift und text*/
+
+        		}
+
+        		
+
+        		#Überuns p{
+        			font-size: 1.3em;
+            		line-height: 1.6;
+            		 margin-top: 10px; 
+        		}
+
+        		#Überuns img{
+        			width: 1000px; /* Neue Breite des Bildes */
+   					height: 400px; 
+    				margin-top: 50px;
+    				margin-bottom: -20px;
+    				border-radius: 40px;
+    				object-fit: cover;
+    				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        		}
+
+/*----------------------------------------------------------------------------------------------------*/
+        		
+        		/*Kundenbewertung*/
+
+        		#Bewertung {
+        			   
+        			display: flex;
+   					flex-direction: column; 					/* Stapelt Bild und Text vertikal */
+    				align-items: center; 						/* Zentriert beides horizontal */
+    				text-align: center; 						/* Textzentrierung */
+				}
+
+				
+        		#Bewertung img {
+	        		width: 250px; 								/* Breite der Bilder */
+					height: 250px; 								/* Höhe der Bilder */
+					border-radius: 50%; 						/* Macht die Bilder kreisförmig */
+					object-fit: cover; 							/* Sorgt dafür, dass das Bild den Kreis ausfüllt */
+					box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 	/* Schatten*/
+					  
+        		}
+
+
+
+        		#Bewertung .Sterne{
+        			border-radius: 0; 							/* Entfernt die Rundung */
+    										
+    				box-shadow: none;							/* Entfernt Schatten */
+    				margin-bottom: 5px; 						/* Kleiner Abstand unter dem Sternenbild */
+    			   width: 60%;
+     			  padding-top: 10%;
+
+   				 height: 70px;/* Höhe begrenzen, um den vertikalen Raum zu reduzieren */
+ 				 object-fit: cover; /* Überschüssigen Raum abschneiden */
+ 				 display: block;
+  				  margin: 0 auto; /* Zentriere das Bild horizontal */
+
+        		}
+
+        		#DreiBewertungen p{
+        			margin-top: 30px;
+        			margin-bottom: 400px;
+        			max-width: 300px; 
+
+    				padding-top: 0;  /
+    				margin-top: 10px; 							/* Reduziert den Abstand über dem Text */
+        		}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+        		/*Ganz unten grüner footer*/
+        		footer{
+        			background-color: green;
+        			padding-bottom: 40px;
+        			
+        		}
+
+        		#impressum h1{
+        			font-size: 40px;
+        			padding-bottom: 40px;
+        			display: flex; /* Flexbox aktivieren */
+    				justify-content: space-between; /* Inhalte horizontal verteilen */
+    				align-items: center; /* Vertikal zentrieren */
+    				padding: 20px; /* Abstand innen */
+    
+    				margin: 0; 
+        		}
+        		#impressum li a {
+        			background-color: #d4e7c2; 					/* Grüner Farbton */
+  					padding: 10px 20px;
+  					text-align: left;
+  					
+  					box-sizing: border-box;
+  					width: auto;
+  					        		}
+  				#impressum ul {
+  				list-style: none; 								/* Entfernt Standard-Punkte der Liste */
+ 				 margin: 0;
+  				padding: 0;
+  				background-color: #d4e7c2;
+				}
+        		
+        		#impressum {
+				  background-color: #d4e7c2; /* Grüner Hintergrund für den gesamten Footer */
+				  padding: 50px;
+				  box-sizing: border-box;
+				}
+
+        		#impressum li a#links {
+        			
+        			display: inline;
+
+        		}
+        		#impressum a {
+				  text-decoration: none;
+				  color: black;
+				  font-weight: bold;
+
+				}
+        		
+        		#impressum a:hover {
+				  text-decoration: underline;
+				}
+
+				#impressum .row {
+				  display: flex; 						/* Nutzt Flexbox, um die drei Spalten nebeneinander zu platzieren */
+				  justify-content: space-between; 	/* Abstand zwischen den Spalten */
+				}
+
+				#impressum .col-sm-4 {
+			  flex: 1; 									/* Jede Spalte nimmt den gleichen Platz ein */
+			  
+			}
+
+				footer ul, nav ul{							/*anklickbare navigation*/
+					list-style: none;
+					background: pink;
+					margin: 0;
+					padding: 0;
+					height: 50px;
+					
+				}
+
+				footer ul li a, nav ul li a{					/*anklickbare navigation*/
+					padding: 130px;
+					text-decoration: none;
+					font-weight: bold;
+					color: black;
+					font-size: 17px;
+					
+				}
+
+				#impressum p{
+					margin-top: 70px;
+					 padding-left: 17px; 
+				}
+	/*----------------------------------------------------------------------------------------------------*/
+        				        		
+      	</style>
+
+	</head>
+			
+
+
+
+
+
+
+
+
+
+
+
+	<body>	<!--bodybereich-->
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5S3LPRSG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+						
+	<!--Header --------------------------------------------------------------------------------------->														
+		<header class="mitte">											<!--bereich logo grün mittig-->
+			<a href="/">												
+				<img src="img/logo.png" alt="SiirenCare Logo" width="100" >					<!--logo-->
+			</a>
+
+		<div id="Warenkorb">
+			
+			<a href="#ZweiSpalten"><img src="img/Wagen.png" alt="Warenkorb icon" width="40"></a>
+			
+		</div>
+		
+		</header>
+
+
+  <a href="#Warenkorb" id="trackable-bag">
+    <img src="img/bag.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
+  </a>
+
+  <script>
+    const trackableBag = document.getElementById('trackable-bag');
+    trackableBag.addEventListener('click', function(event) {
+      event.preventDefault();
+      gtag('event', 'bag_icon_click', {
+        'event_category': 'Navigation',
+        'event_label': 'Grüner Warenkorb',
+        'value': 1
+      });
+      console.log('Tracking: Klick auf Warenkorb-Icon');
+    });
+  </script>
+
+																
+		
+	<!--Navigation --------------------------------------------------------------------------------------->	
+	
+		<nav>
+    		<ul class="nav-list">
+				<ul class="mitte">
+				
+
+											<!--pinke navigation-->	
+					<li class="dropdown">
+					
+						<a href="#ZweiSpalten">	Unsere Produkte	</a>		
+						
+							<ul class="dropdown-menu">
+								<li>	<a href="#ZweiSpalten">	stapaziertes Haar	</a>		</li>
+								<li>	<a href="#ZweiSpalten">	voluminöses Haar	</a>		</li>
+								<li>	<a href="#ZweiSpalten">	Locken und Wellen	</a>		</li>
+							</ul>
+					</li>
+					
+
+					<li class="dropdown">
+					
+						<a href="#ZweiSpalten">	Benefits	</a>		
+						
+							<ul class="dropdown-menu">
+								<li>	<a href="#DreiSpalten">	nachhaltig	</a>		</li>
+								<li>	<a href="#DreiSpalten">	tierversuchsfrei	</a>		</li>
+								<li>	<a href="#DreiSpalten">	pflegend	</a>		</li>
+							</ul>
+					</li>
+				
+
+					<li class="dropdown">
+					
+						<a href="#ZweiSpalten">	Über uns </a>		
+						
+							<ul class="dropdown-menu">
+								<li>	<a href="#Überuns">	Unsere Vision	</a>		</li>
+								<li>	<a href="#Überuns">	Unser Team	</a>		</li>
+								<li>	<a href="#Überuns">	Geschichte	</a>		</li>
+							</ul>
+					</li>
+				
+
+					<li class="dropdown">
+					
+						<a href="#ZweiSpalten">	Impressum	</a>		
+						
+							<ul class="dropdown-menu">
+								<li>	<a href="#impressum">	Kontakt	</a>		</li>
+								<li>	<a href="#impressum">	Datenschutzrichtlinien	</a>		</li>
+								<li>	<a href="#impressum">	AGB	</a>		</li>
+							</ul>
+					</li>
+				
+
+
+
+					
+				</ul>	
+			</ul>														
+		</nav>
+<!--Video --------------------------------------------------------------------------------------->	
+
+		<div id="video">
+		<video src="img/video.mp4" muted loop autoplay> </video>									<!--Video-->
+		</div>
+
+
+		<section id="banner">                           				<!--call to action button-->                          
+        <h1>Deine Lösung für <br> gepflegtes Haar</h1>
+         <a href="#ZweiSpalten"> <button>Mehr entdecken</button> </a>
+    	</section>
+
+		<section class="mitte">
+		<h1> Unsere Produkte </h1>												<!--Unsere Produkte Überschrift-->
+		</section>
+
+
+<!--Produkte---------------------------------------------------------------------------------------->
+
+
+<section id="ZweiSpalten">
+	<div class="container">
+		<div class="row"> 
+
+<!--Produkte---------------------------------------------------------------------------------------->		
+
+				<div class="col-sm-6">
+					<div id="shampoo">
+						<img class="img-rounded" src="img/shampoo.png" alt="Shampooflasche" id="img-shampoo">
+							
+							<div id="LinksTexte">
+								<div class="Textundicon" >	
+									<h1>Shampoo</h1>
+									<a href="#Warenkorb">
+									<img src="img/bag.png" alt="Icon grüner Warenkorb" width="50" class="bagicon" id="links">
+									</a>
+								</div>
+
+							<p>Cherry blossom</p>
+							<p>350 ml</p>
+							<p>4,95€</p>
+								
+							</div>	
+		    		</div>
+				</div>
+
+<!--Conditioner----------------------------------------------------------------------------------------->	
+
+
+			<div class="col-sm-6">															<!--2. produkt conditioner-->
+				<div id="conditioner">
+					<img class="img-rounded" src="img/conditioner.png" alt="Conditionerflasche" id="img-conditioner">
+
+					<div id="RechtsTexte">
+						<div class="Textundicon" >	
+							
+								<h1>Conditioner</h1>
+								<a href="#Warenkorb">
+								<img src="img/bag.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
+								</a>
+						</div>
+
+								<p>Cherry blossom</p>
+								<p>350 ml</p>
+								<p>4,95€</p>
+					</div>
+    			</div>
+			</div>
+
+<!--Pfeile----------------------------------------------------------------------------------------->	
+			<div class="product-navigation">
+
+				<a href="#Warenkorb">
+			  <button><img src="img/Pfeillinks.png" alt="Pfeil der nach links zeigt" class="arrow left-arrow"> </button>
+			    </a>
+			    
+			    <a href="#Warenkorb">
+			   <button><img src="img/Pfeilrechts.png" alt="pfeil der nach rechts zeigt"class="arrow right-arrow"> </button>
+				</a>
+			</div>
+<!---->
+
+		</div>
+	</div>
+</section>
+		
+
+	
+<!--Produkt Eigenschaften---------------------------------------------------------------------------------------->
+
+
+<section id="DreiSpalten">			
+	<div class="container">
+
+
+		<section class="mitte"> 
+			<div id="Benefits">		<!--Benefits Überschrift-->
+				<h1>Benefits</h1>
+			</div>
+		</section>
+
+		<div class="row"> 
+
+<!--Nachhaltig-->
+
+			<div class="col-sm-4">
+				<div id="Nachhaltig">
+					<img src="img/nachhaltig.jpg" alt="Bild von Blättern">
+					<a href="#ZweiSpalten">
+					 <button class="centered-button">nachhaltig</button>
+					</a>
+    			</div>
+			</div>
+
+<!--Tierversuchsfrei-->
+
+			<div class="col-sm-4">
+				<div id="Tierversuchsfrei">
+					<img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen">
+					<a href="#ZweiSpalten">
+					 <button class="centered-button">tierversuchsfrei</button>
+					</a>
+    			</div>
+			</div>
+
+<!--Pflegend-->
+
+			<div class="col-sm-4">
+				<div id="Pflegend">
+					<img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau">
+					<a href="#ZweiSpalten">
+					<button class="centered-button">pflegend</button>
+					</a>
+    			</div>
+			</div>
+			
+<!---->
+
+		</div>
+	</div>
+</section>	
+
+<!--Über uns---------------------------------------------------------------------------------------->
+	
+
+ <section class="mitte">
+        	<section id="Überuns">
+
+        <h1>Über uns</h1>
+        <p>Als Unternehmen verbinden wir moderne Haarpflege mit einem klaren Ziel: Schönheit und 
+Nachhaltigkeit in Einklang zu bringen. Unser Anspruch ist es, dir Produkte anzubieten, die deinem 
+Haar Glanz und Gesundheit verleihen – und dabei verantwortungsvoll mit unserer Umwelt umgehen.
+
+Unsere Produkte werden aus hochwertigen, natürlichen Inhaltsstoffen hergestellt, die sanft zu
+deinem Haar und deiner Kopfhaut sind. Sie sind frei von schädlichen Chemikalien, Mikroplastik und 
+Tierversuchen. Stattdessen setzen wir auf vegane und biologisch abbaubare Formulierungen, die 
+effektiv pflegen und schützend.</p>
+
+<img src="img/team.jpg" alt="team von siirencare">
+    </section>
+</section>
+
+<!--Bewertungen---------------------------------------------------------------------------------------->
+
+<section class="mitte">
+		<h1> Bewertungen </h1>												<!--Kundenbewertungen-->
+		</section>
+  
+<section id="DreiBewertungen">			
+	<div class="container">
+		<div class="row"> 
+
+<!--Bewertung 1-->
+
+			<div class="col-sm-4">
+				<div id="Bewertung">
+					<img src="img/frau1.jpg" alt="Bild von Frau">
+					<img src="img/Sterne.png" alt="Bild von 5 schwarzen Sternen" class="Sterne">
+							
+						
+						<p>Lina Hoffmann: <br>
+							"Meine Haare fühlen sich 
+							unglaublich weich und gesund 
+							an, absolute Empfehlung!"
+								</p>
+
+							
+    			</div>
+			</div>
+
+<!--Bewertung 2-->
+
+			<div class="col-sm-4">
+				<div id="Bewertung">
+					<img src="img/frau2.jpg" alt="Bild von Frau">
+					<img src="img/Sterne.png" alt="Bild von 5 schwarzen Sternen" class="Sterne">
+
+							<p>Maya Krüger: <br>
+							"Es ist ein gutes Gefühl 
+							zu wissen, dass ich gleichzeitig
+ 							etwas für die Umwelt tue." 
+							</p>
+    			</div>
+			</div>
+
+<!--Bewertung 3-->
+
+			<div class="col-sm-4">
+				<div id="Bewertung">
+					<img src="img/frau3.jpg" alt="Bild von Frau">
+					<img src="img/Sterne.png" alt="Bild von 5 schwarzen Sternen" class="Sterne">
+					
+							<p> Linh Nguyen: <br> 
+							"Meine Haare fühlen sich 
+							gepflegt an und ich schätze 
+							es, dass die Inhaltsstoffe 
+							nachhaltig sind. 
+							</p>
+    			</div>
+			</div>
+	
+		</div>
+	</div>
+</section>	
+		
+<!--Footer---------------------------------------------------------------------------------------->	
+
+<footer id="impressum">
+
+
+			<div id="Impressum">		<!--Impressum Überschrift-->
+				<h1>Impressum</h1>
+			</div>
+		
+		<div class="row"> 
+
+			<div class="col-sm-4">
+
+<!--Links-->
+
+				<div id="links">
+				<ul>																<!--grüne footer leiste ganz unten-->								
+				<li>	<a href="/">	Newsletter				</a>		</li>
+				<li>	<a href="/">	Datenschutzrichtlinien	</a>		</li>
+				</ul>
+    			</div>
+			</div>
+
+<!--Mitte-->
+
+			<div class="col-sm-4">
+				<div id="mitte">
+				<ul>
+					<li>	<a href="/">	Kontakt					</a>		</li>
+					<li>	<a href="/">	Datenschutzerklärung	</a>		</li>
+    			</ul>
+    		</div>
+			</div>
+
+<!--rechts-->
+
+			<div class="col-sm-4">
+				<div id="leer">
+					
+    			</div>
+			</div>
+		</div>
+		<p>Copyright © 2024/2025 Siirencare | designed by Gruppe 7 </p>
+	
+</footer>
+
+
+</body>
+</html>
