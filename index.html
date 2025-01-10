@@ -642,7 +642,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 		
 		</header>
-
+<!--tracking tags --------------------------------------------------------------------------------------->
 
   <a href="#Warenkorb" id="trackable-bag">
     <img src="img/bag.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
@@ -652,7 +652,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const trackableBag = document.getElementById('trackable-bag');
     trackableBag.addEventListener('click', function(event) {
       event.preventDefault();
-      gtag('event', 'bag_icon_click', {
+      gtag('event''bag_icon_click', {
         'event_category': 'Navigation',
         'event_label': 'Grüner Warenkorb',
         'value': 1
