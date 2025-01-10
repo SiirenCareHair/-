@@ -645,21 +645,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--tracking tags --------------------------------------------------------------------------------------->
 
   <a href="#Warenkorb" id="trackable-bag">
-    <img src="img/bag.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
-  </a>
+  <img src="img/bag.png" alt="Icon grüner Warenkorb" width="50" class="bagicon" id="links" style="cursor: pointer;">
+</a>
 
-  <script>
-    const trackableBag = document.getElementById('trackable-bag');
-    trackableBag.addEventListener('click', function(event) {
-      event.preventDefault();
-      gtag('event''bag_icon_click', {
-        'event_category': 'Navigation',
-        'event_label': 'Grüner Warenkorb',
-        'value': 1
-      });
-      console.log('Tracking: Klick auf Warenkorb-Icon');
+<script>
+ 
+  const trackableBag = document.getElementById('trackable-bag');
+
+  
+  trackableBag.addEventListener('click', function(event) {
+   
+    gtag('event', 'add_to_bag', {
+      'event_category': 'E-Commerce',
+      'event_label': 'Warenkorb hinzufügen',
+      'value': 1
     });
-  </script>
+
+   
+    console.log('Tracking: add_to_bag ausgelöst');
+  });
+</script>
 
 																
 		
