@@ -371,94 +371,84 @@ bagicon
         		/*Produkt benefits*/
 
         	
-        		#Benefits h1{
-        			margin-bottom: 10px;
-        			margin-top: 70px;
-        		}
-
-        		#DreiSpalten {
-        			background-color: pink;
-        			position: relative;
-				    display: flex;						/* drei Spalten nebeneinander zu platzieren */
-				    justify-content: center; 			/* Zentriert die Bilder horizontal */
-				    align-items: center;    			/* Zentriert die Bilder vertikal */
-				    flex-wrap: wrap;       				 
-			  		flex: 1; 									/* Jede Spalte nimmt den gleichen Platz ein */
-			  		text-align: center;
-					justify-content: center;
-					padding-bottom: 100px;
-					margin-top: 200px; /* Fügt oben Abstand hinzu */
-
-					}
-
-				
-        		#DreiSpalten img {
-	        		flex-basis: 32%;
-	        		border-radius: 50px;
-	        		margin-bottom: 30px;
-	        		
-	        		overflow: hidden;
-	        		margin: 0 10px; /* Abstand von 10px nach links und rechts */
-	        		margin-top: 100px;
-
-	        		max-width: 300px;
-	    			height: 700px; 
-	    			object-fit: cover
-
-
-        		}
-				
-/*----------------------------*/
         		
-				/*Buttons auf den Bildern*/
-				.centered-button {
-				   
-				  
-				    background-color: rgba(255, 255, 255, 0.8); 		/* Weiße Hintergrundfarbe mit Transparenz */
-				    border: none; 										/* Entfernt Rahmen */
-				    padding: 10px 20px; 								/* Innenabstand für den Button */
-				    border-radius: 50px; 								/* Runde Ecken */
-				    font-size: 30px;
-				    color: black;										 /* Schriftfarbe */
-				    display: flex;
-				}
+  #Benefits h1 {
+    margin-bottom: 10px;
+    margin-top: 70px;
+  }
 
-        																	
-				.centered-button:hover {								/* Hover-Effekt */
-				    background-color: rgba(0, 0, 0, 0.8);
-				    color: white;
-				}
+  #DreiSpalten {
+    background-color: pink;
+    position: relative;
+    display: flex; /* Drei Spalten nebeneinander */
+    justify-content: center; /* Zentriert die Bilder horizontal */
+    align-items: center; /* Zentriert die Bilder vertikal */
+    flex-wrap: wrap; /* Bilder umbrechen, wenn Platz knapp wird */
+    flex: 1; /* Jede Spalte nimmt den gleichen Platz ein */
+    text-align: center;
+    padding-bottom: 100px;
+    margin-top: 200px; /* Abstand nach oben */
+  }
 
-				#Nachhaltig button{
+  #DreiSpalten img {
+    flex-basis: 32%; /* Basisbreite der Bilder */
+    border-radius: 50px; /* Abgerundete Ecken */
+    margin: 30px 10px; /* Abstand von 10px nach links und rechts */
+    max-width: 300px; /* Maximale Breite */
+    height: 700px; /* Feste Höhe */
+    object-fit: cover; /* Skaliert das Bild, um es vollständig anzuzeigen */
+  }
 
-					position: absolute; 								/* Button wird relativ zum Container positioniert */
-				    top: 80%; 											/* Zentriert den Button vertikal */
-				    left: 19%; 											/* Zentriert den Button horizontal */
-				    transform: translate(-50%, -50%); 					/* Korrigiert die Zentrierung */
+  /* Buttons auf den Bildern */
+  .centered-button {
+    position: absolute; /* Positioniert relativ zum Container */
+    top: 80%; /* Vertikale Position des Buttons */
+    left: 50%; /* Horizontale Position des Buttons */
+    transform: translate(-50%, -50%); /* Zentriert den Button */
+    background-color: rgba(255, 255, 255, 0.8); /* Weiße, halbtransparente Hintergrundfarbe */
+    border: none; /* Entfernt Rahmen */
+    padding: 10px 20px; /* Innenabstand des Buttons */
+    border-radius: 50px; /* Runde Ecken */
+    font-size: 30px; /* Schriftgröße */
+    color: black; /* Schriftfarbe */
+    cursor: pointer; /* Zeigt, dass der Button klickbar ist */
+    transition: all 0.3s ease; /* Sanfter Übergang für Hover-Effekt */
+  }
 
+  .centered-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Dunklerer Hintergrund beim Hover */
+    color: white; /* Weiße Schrift beim Hover */
+  }
 
-				}
+  /* Buttons spezifisch für die drei Bereiche */
+  #Nachhaltig button {
+    top: 80%;
+    left: 19%;
+  }
 
-				#Tierversuchsfrei button{
+  #Tierversuchsfrei button {
+    top: 80%;
+    left: 50%;
+  }
 
-					position: absolute; 								/* Button wird relativ zum Container positioniert */
-					justify-content: center;
-				    top: 80%; 											/* Zentriert den Button vertikal */
-				    left: 50%; 											/* Zentriert den Button horizontal */
-				    transform: translate(-50%, -50%); 					/* Korrigiert die Zentrierung */
+  #Pflegend button {
+    top: 80%;
+    left: 81%;
+  }
 
+  /* Responsive Anpassungen */
+  @media (max-width: 768px) {
+    #DreiSpalten img {
+      height: auto; /* Passt die Höhe an die Breite an */
+      max-width: 90%; /* Verkleinert die Bilder für kleinere Bildschirme */
+    }
 
-				}
+    .centered-button {
+      font-size: 20px; /* Kleinere Schriftgröße für mobile Geräte */
+      padding: 8px 16px; /* Kleinere Buttons */
+    }
+  }
 
-				#Pflegend button{
-
-					position: absolute; 								/* Button wird relativ zum Container positioniert */
-				    top: 80%; 											/* Zentriert den Button vertikal */
-				    left: 81%;											/* Zentriert den Button horizontal */
-				    transform: translate(-50%, -50%); 					/* Korrigiert die Zentrierung */
-
-
-				}
 
 /*----------------------------------------------------------------------------------------------------*/
         		
@@ -892,86 +882,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		<div class="row"> 
 
-<!--Nachhaltig-->
+<div class="row">
+  <!-- Nachhaltig -->
+  <div class="col-sm-4">
+    <div id="Nachhaltig">
+      <img src="img/nachhaltig.jpg" alt="Bild von Blättern" class="img-fluid">
+      <a href="#ZweiSpalten">
+        <button class="centered-button" onclick="trackSelectContentNachhaltig()">nachhaltig</button>
+      </a>
+    </div>
+  </div>
 
-		<div class="col-sm-4">
-  <div id="Nachhaltig">
-    <img src="img/nachhaltig.jpg" alt="Bild von Blättern">
-    <a href="#ZweiSpalten">
-      <!-- Nachhaltig-Button mit Tracking -->
-      <button class="centered-button" onclick="trackSelectContent()">nachhaltig</button>
-    </a>
+  <!-- Tierversuchsfrei -->
+  <div class="col-sm-4">
+    <div id="Tierversuchsfrei">
+      <img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen" class="img-fluid">
+      <a href="#ZweiSpalten">
+        <button class="centered-button" onclick="trackSelectContentTierversuchsfrei()">tierversuchsfrei</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Pflegend -->
+  <div class="col-sm-4">
+    <div id="Pflegend">
+      <img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau" class="img-fluid">
+      <a href="#ZweiSpalten">
+        <button class="centered-button" onclick="trackSelectContentPflegend()">pflegend</button>
+      </a>
+    </div>
   </div>
 </div>
-
-<!-- Tracking-Funktion für den Nachhaltig-Button -->
-<script>
-  function trackSelectContent() {
-    // Sende das Ereignis an Google Analytics
-    gtag('event', 'select_content', {
-      'event_name': 'E-Commerce' // Parameter und Wert
-    });
-
-    // Debugging: Zeige in der Konsole an, dass das Event ausgelöst wurde
-    console.log('Tracking: select_content ausgelöst');
-  }
-</script>
-
-<!--Tierversuchsfrei-->
-
-			<<div class="col-sm-4">
-  <div id="Tierversuchsfrei">
-    <img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen">
-    <a href="#ZweiSpalten">
-      <!-- Tierversuchsfrei-Button mit Tracking -->
-      <button class="centered-button" onclick="trackSelectContentTierversuchsfrei()">tierversuchsfrei</button>
-    </a>
-  </div>
-</div>
-
-<!-- Tracking-Funktion für den Tierversuchsfrei-Button -->
-<script>
-  function trackSelectContentTierversuchsfrei() {
-    // Sende das Ereignis an Google Analytics
-    gtag('event', 'select_content', {
-      'event_name': 'E-Commerce' // Parameter und Wert
-    });
-
-    // Debugging: Zeige in der Konsole an, dass das Event ausgelöst wurde
-    console.log('Tracking: select_content für Tierversuchsfrei ausgelöst');
-  }
-</script>
-
-<!--Pflegend-->
-
-			<<div class="col-sm-4">
-  <div id="Pflegend">
-    <img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau">
-    <a href="#ZweiSpalten">
-      <!-- Pflegend-Button mit Tracking -->
-      <button class="centered-button" onclick="trackSelectContentPflegend()">pflegend</button>
-    </a>
-  </div>
-</div>
-
-<!-- Tracking-Funktion für den Pflegend-Button -->
-<script>
-  function trackSelectContentPflegend() {
-    // Sende das Ereignis an Google Analytics
-    gtag('event', 'select_content', {
-      'event_name': 'E-Commerce' // Parameter und Wert
-    });
-
-    // Debugging: Zeige in der Konsole an, dass das Event ausgelöst wurde
-    console.log('Tracking: select_content für Pflegend ausgelöst');
-  }
-</script>
-			
-<!---->
-
-		</div>
-	</div>
-</section>	
 
 <!--Über uns---------------------------------------------------------------------------------------->
 	
