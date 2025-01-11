@@ -373,69 +373,74 @@ bagicon
         	
         		
   
-  
-  #Benefits h1 {
-    margin-bottom: 10px;
-    margin-top: 70px;
-  }
+  /* Benefits Überschrift */
+#Benefits h1 {
+  margin-bottom: 10px;
+  margin-top: 70px;
+}
 
-  #DreiSpalten {
-    background-color: pink;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-bottom: 100px;
-    margin-top: 200px;
-  }
+/* Drei Spalten Container */
+#DreiSpalten {
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  margin-top: 200px;
+}
 
-  #DreiSpalten img {
-    flex-basis: 32%;
-    border-radius: 50px;
-    margin: 30px 10px;
-    max-width: 300px;
-    height: 700px;
-    object-fit: cover;
-    position: relative; /* Damit Buttons relativ zum Bild positioniert werden */
+/* Container für jedes Bild und den Button */
+.benefit-container {
+  position: relative; /* Wichtig für die absolute Positionierung des Buttons */
+  text-align: center; /* Zentriert den Button unter dem Bild */
+  margin: 20px;
+}
+
+/* Bilder */
+.benefit-image {
+  width: 100%; /* Bild nimmt die volle Breite des Containers ein */
+  max-width: 300px; /* Maximale Breite */
+  height: 700px; /* Feste Höhe */
+  object-fit: cover; /* Bild wird skaliert, ohne verzerrt zu werden */
+  border-radius: 50px;
+}
+
+/* Button */
+.centered-button {
+  position: absolute; /* Absolut relativ zum .benefit-container */
+  top: 50%; /* Vertikal zentriert */
+  left: 50%; /* Horizontal zentriert */
+  transform: translate(-50%, -50%); /* Perfekte Zentrierung */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+/* Button Hover-Effekt */
+.centered-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+  .benefit-image {
+    height: auto; /* Passt die Höhe an die Breite an */
+    max-width: 90%;
   }
 
   .centered-button {
-    position: absolute;
-    top: 50%; /* Vertikale Zentrierung */
-    left: 50%; /* Horizontale Zentrierung */
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 20px;
-    color: black;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 2;
+    font-size: 16px;
+    padding: 8px 16px;
   }
-
-  .centered-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-  }
-
-  #Nachhaltig, #Tierversuchsfrei, #Pflegend {
-    position: relative; /* Damit die Buttons relativ positioniert sind */
-  }
-
-  @media (max-width: 768px) {
-    #DreiSpalten img {
-      height: auto;
-      max-width: 90%;
-    }
-
-    .centered-button {
-      font-size: 16px;
-      padding: 8px 16px;
-    }
-  }
+}
 
 /*----------------------------------------------------------------------------------------------------*/
         		
@@ -859,42 +864,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section id="DreiSpalten">
   <div class="container">
-    <!-- Überschrift -->
+    <!-- Benefits Überschrift -->
     <section class="mitte">
       <div id="Benefits">
         <h1>Benefits</h1>
       </div>
     </section>
 
-    <!-- Drei Spalten -->
+    <!-- Drei Spalten mit Bildern und Buttons -->
     <div class="row">
       <!-- Nachhaltig -->
       <div class="col-sm-4">
-        <div id="Nachhaltig">
-          <img src="img/nachhaltig.jpg" alt="Bild von Blättern" class="img-fluid">
-          <a href="#ZweiSpalten">
-            <button class="centered-button" onclick="trackSelectContentNachhaltig()">nachhaltig</button>
-          </a>
+        <div class="benefit-container">
+          <img src="img/nachhaltig.jpg" alt="Bild von Blättern" class="benefit-image">
+          <button class="centered-button" onclick="trackSelectContentNachhaltig()">nachhaltig</button>
         </div>
       </div>
 
       <!-- Tierversuchsfrei -->
       <div class="col-sm-4">
-        <div id="Tierversuchsfrei">
-          <img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen" class="img-fluid">
-          <a href="#ZweiSpalten">
-            <button class="centered-button" onclick="trackSelectContentTierversuchsfrei()">tierversuchsfrei</button>
-          </a>
+        <div class="benefit-container">
+          <img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen" class="benefit-image">
+          <button class="centered-button" onclick="trackSelectContentTierversuchsfrei()">tierversuchsfrei</button>
         </div>
       </div>
 
       <!-- Pflegend -->
       <div class="col-sm-4">
-        <div id="Pflegend">
-          <img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau" class="img-fluid">
-          <a href="#ZweiSpalten">
-            <button class="centered-button" onclick="trackSelectContentPflegend()">pflegend</button>
-          </a>
+        <div class="benefit-container">
+          <img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau" class="benefit-image">
+          <button class="centered-button" onclick="trackSelectContentPflegend()">pflegend</button>
         </div>
       </div>
     </div>
