@@ -744,9 +744,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div id="LinksTexte">
 								<div class="Textundicon" >	
 									<h1>Shampoo</h1>
-									<a href="#Warenkorb" class="trackable-bag">
+								<a href="#Warenkorb" class="trackable-bag" onclick="trackAddToCart()">
   <img src="img/bag.png" alt="Icon grüner Warenkorb" width="50" class="bagicon" id="links">
 </a>
+
+<script>
+  function trackAddToCart() {
+    gtag('event', 'add_to_cart', {
+      'event_category': 'E-Commerce',
+      'event_label': 'Warenkorb Klick',
+      'value': 1
+    });
+    console.log('Tracking: add_to_cart ausgelöst');
+  }
+</script>
 								</div>
 
 							<p>Cherry blossom</p>
@@ -768,10 +779,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<div class="Textundicon" >	
 							
 								<h1>Conditioner</h1>
-								<a href="#Warenkorb" class="trackable-bag">
+<a href="#Warenkorb" class="trackable-bag" onclick="trackAddToCartRight()">
   <img src="img/bag2.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
 </a>
-						</div>
+
+<script>
+  function trackAddToCartRight() {
+    gtag('event', 'add_to_cart', {
+      'event_category': 'E-Commerce',
+      'event_label': 'Warenkorb Rechts',
+      'value': 1
+    });
+    console.log('Tracking: add_to_cart für rechten Warenkorb ausgelöst');
+  }
+</script>
+		</div>
 
 								<p>Cherry blossom</p>
 								<p>350 ml</p>
