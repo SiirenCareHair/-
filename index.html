@@ -745,136 +745,108 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1>Deine Lösung für <br> gepflegtes Haar</h1>
          <a href="#ZweiSpalten"> <button>Mehr entdecken</button> </a>
     	</section>
-
-		<section class="mitte">
-		<h1> Unsere Produkte </h1>												<!--Unsere Produkte Überschrift-->
-		</section>
-
-
-<!--Produkte---------------------------------------------------------------------------------------->
-
-
+<!-------------------------- Produkte ----------------------------------------------------->
 <section id="ZweiSpalten">
-	<div class="container">
-		<div class="row"> 
+  <div class="container">
+    <div class="carousel-container">
+      <div class="carousel">
+        <!-- Shampoo Produkt 1 -->
+        <div class="carousel-item">
+          <img 
+            class="img-rounded hover-effect" 
+            src="img/shampoo.png" 
+            alt="Shampooflasche 1">
+          <div>
+            <h1>Shampoo</h1>
+            <p>Cherry blossom</p>
+            <p>350 ml</p>
+            <p>4,95€</p>
+          </div>
+        </div>
 
-<!--Produkte shampoo---------------------------------------------------------------------------------------->		
+        <!-- Conditioner Produkt 1 -->
+        <div class="carousel-item">
+          <img 
+            class="img-rounded hover-effect" 
+            src="img/conditioner.png" 
+            alt="Conditionerflasche 1">
+          <div>
+            <h1>Conditioner</h1>
+            <p>Cherry blossom</p>
+            <p>350 ml</p>
+            <p>4,95€</p>
+          </div>
+        </div>
 
+        <!-- Shampoo Produkt 2 -->
+        <div class="carousel-item">
+          <img 
+            class="img-rounded hover-effect" 
+            src="img/FINAL_shampoo_locken.png" 
+            alt="Shampooflasche 2">
+          <div>
+            <h1>Shampoo</h1>
+            <p>Lavender</p>
+            <p>350 ml</p>
+            <p>4,95€</p>
+          </div>
+        </div>
 
-<div class="col-sm-6">
-  <div id="shampoo">
-    <!-- Shampoo-Bild mit Tracking und Hover-Effekt -->
-    <img 
-      class="img-rounded hover-effect" 
-      src="img/shampoo.png" 
-      alt="Shampooflasche" 
-      id="img-shampoo" 
-      onclick="trackSelectItemShampoo()">
-      
-    <div id="LinksTexte">
-      <div class="Textundicon">
-        <h1>Shampoo</h1>
-        <!-- Warenkorb, unverändert -->
-        <a href="#Warenkorb" class="trackable-bag" onclick="trackAddToCart()">
-          <img src="img/bag.png" alt="Icon grüner Warenkorb" width="50" class="bagicon" id="links">
-        </a>
-        
-        <script>
-          function trackAddToCart() {
-            gtag('event', 'add_to_cart', {
-              'event_category': 'E-Commerce',
-              'event_label': 'Warenkorb Klick',
-              'value': 1
-            });
-            console.log('Tracking: add_to_cart ausgelöst');
-          }
-        </script>
+        <!-- Conditioner Produkt 2 -->
+        <div class="carousel-item">
+          <img 
+            class="img-rounded hover-effect" 
+            src="img/FINAL_Conditioner_locken.png" 
+            alt="Conditionerflasche 2">
+          <div>
+            <h1>Conditioner</h1>
+            <p>Lavender</p>
+            <p>350 ml</p>
+            <p>4,95€</p>
+          </div>
+        </div>
+
+        <!-- Shampoo Produkt 3 -->
+        <div class="carousel-item">
+          <img 
+            class="img-rounded hover-effect" 
+            src="img/FINAL_shampoo_volumen.png" 
+            alt="Shampooflasche 3">
+          <div>
+            <h1>Shampoo</h1>
+            <p>Mint</p>
+            <p>350 ml</p>
+            <p>4,95€</p>
+          </div>
+        </div>
+
+        <!-- Conditioner Produkt 3 -->
+        <div class="carousel-item">
+          <img 
+            class="img-rounded hover-effect" 
+            src="img/FINAL_conditioner_volumen.png" 
+            alt="Conditionerflasche 3">
+          <div>
+            <h1>Conditioner</h1>
+            <p>Mint</p>
+            <p>350 ml</p>
+            <p>4,95€</p>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <p>Cherry blossom</p>
-      <p>350 ml</p>
-      <p>4,95€</p>
+    <!-- Navigationspfeile mit Tracking -->
+    <div class="carousel-navigation">
+      <button class="arrow left-arrow" onclick="moveCarousel(-1, 'left')">
+        <img src="img/Pfeillinks.png" alt="Pfeil der nach links zeigt">
+      </button>
+      <button class="arrow right-arrow" onclick="moveCarousel(1, 'right')">
+        <img src="img/Pfeilrechts.png" alt="Pfeil der nach rechts zeigt">
+      </button>
     </div>
   </div>
-</div>
-
-<!-- Tracking-Funktion für das Shampoo-Bild -->
-<script>
-  function trackSelectItemShampoo() {
-    gtag('event', 'select_item', {
-      'event_name': 'E-Commerce'
-    });
-    console.log('Tracking: select_item für Shampoo ausgelöst');
-  }
-</script>
-<!--Conditioner----------------------------------------------------------------------------------------->	
-
-
-			
-			<div class="col-sm-6">											
-  <div id="conditioner">
-    <!-- Conditioner-Bild mit Tracking -->
-    <img 
-      class="img-rounded hover-effect" 
-      src="img/conditioner.png" 
-      alt="Conditionerflasche" 
-      id="img-conditioner" 
-      onclick="trackSelectItemConditioner()">
-
-    <div id="RechtsTexte">
-      <div class="Textundicon">
-        <h1>Conditioner</h1>
-        <!-- Warenkorb, unverändert -->
-        <a href="#Warenkorb" class="trackable-bag" onclick="trackAddToCartRight()">
-          <img src="img/bag2.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
-        </a>
-
-        <script>
-          function trackAddToCartRight() {
-            gtag('event', 'add_to_cart', {
-              'event_category': 'E-Commerce',
-              'event_label': 'Warenkorb Rechts',
-              'value': 1
-            });
-            console.log('Tracking: add_to_cart für rechten Warenkorb ausgelöst');
-          }
-        </script>
-      </div>
-
-      <p>Cherry blossom</p>
-      <p>350 ml</p>
-      <p>4,95€</p>
-    </div>
-  </div>
-</div>
-
-<!-- Tracking-Funktion für das Conditioner-Bild -->
-<script>
-  function trackSelectItemConditioner() {
-    gtag('event', 'select_item', {
-      'event_name': 'E-Commerce'
-    });
-    console.log('Tracking: select_item für Conditioner ausgelöst');
-  }
-</script>
-<!--Pfeile----------------------------------------------------------------------------------------->	
-			<div class="product-navigation">
-
-				<a href="#Warenkorb">
-			  <button><img src="img/Pfeillinks.png" alt="Pfeil der nach links zeigt" class="arrow left-arrow"> </button>
-			    </a>
-			    
-			    <a href="#Warenkorb">
-			   <button><img src="img/Pfeilrechts.png" alt="pfeil der nach rechts zeigt"class="arrow right-arrow"> </button>
-				</a>
-			</div>
-<!---->
-
-		</div>
-	</div>
 </section>
-		
-
 
 	
 <!--Produkt Eigenschaften---------------------------------------------------------------------------------------->
@@ -1066,5 +1038,31 @@ effektiv pflegen und schützend.</p>
     console.log(`Tracking: select_content ausgelöst für ${buttonName}`);
   }
 </script>
+
+<script>
+  let currentIndex = 0; // Aktuelle Position im Karussell
+  const items = document.querySelectorAll('.carousel-item'); // Alle Karussell-Elemente
+  const totalItems = items.length;
+
+  function moveCarousel(direction, arrowType) {
+    const carousel = document.querySelector('.carousel');
+    
+    // Berechnung der neuen Position
+    currentIndex = (currentIndex + direction + totalItems) % totalItems;
+
+    // Verschiebt das Karussell
+    carousel.style.transform = `translateX(-${currentIndex * 50}%)`;
+
+    // Google Analytics Tracking
+    gtag('event', 'click', {
+      'event_name': 'E-Commerce',
+      'arrow': arrowType // Erfasst, welcher Pfeil geklickt wurde (left oder right)
+    });
+
+    // Debugging: Zeigt an, welcher Pfeil geklickt wurde
+    console.log(`Karussell bewegt: ${arrowType}`);
+  }
+</script>
+
 </body>
 </html>
