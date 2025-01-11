@@ -644,7 +644,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</header>
 <!--tracking tags --------------------------------------------------------------------------------------->
 
-  <a href="#Warenkorb" id="trackable-bag">
+<a href="#Warenkorb" id="trackable-bag">
   <img src="img/bag.png" alt="Icon grüner Warenkorb" width="50" class="bagicon" id="links" style="cursor: pointer;">
 </a>
 
@@ -654,18 +654,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   
   trackableBag.addEventListener('click', function(event) {
-   
-    gtag('event', 'add_to_bag', {
+  
+    gtag('event', 'add_to_cart', {
       'event_category': 'E-Commerce',
       'event_label': 'Warenkorb hinzufügen',
       'value': 1
     });
 
-   
-    console.log('Tracking: add_to_bag ausgelöst');
+    
+    console.log('Tracking: add_to_cart ausgelöst');
   });
 </script>
-
 																
 		
 	<!--Navigation --------------------------------------------------------------------------------------->	
