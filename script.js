@@ -1,18 +1,14 @@
-// Hole den gemeinsamen Container, der die Warenkörbe enthält
-const container = document.querySelector('#bag-container');
+// Hole alle Körbe mit der Klasse 'trackable-bag'
+const allBags = document.querySelectorAll('.trackable-bag');
 
-// Füge einen Klick-Event-Listener für den Container hinzu
-container.addEventListener('click', function(event) {
-  // Prüfe, ob das geklickte Element die Klasse 'trackable-bag' hat
-  if (event.target.classList.contains('trackable-bag')) {
-    // Google Analytics Ereignis 'add_to_cart' auslösen
+// Füge jedem Korb einen Klick-Event-Listener hinzu
+allBags.forEach(function(bag) {
+  bag.addEventListener('click', function(event) {
     gtag('event', 'add_to_cart', {
-      'event_category': 'E-Commerce', // Kategorie des Ereignisses
-      'event_label': 'Warenkorb Klick', // Beschreibung des Ereignisses
-      'value': 1 // Optionaler Wert (z. B. Anzahl der Klicks)
+      'event_category': 'E-Commerce',
+      'event_label': 'Warenkorb Klick',
+      'value': 1
     });
-
-    // Debugging: Zeige in der Konsole, dass das Event ausgelöst wurde
     console.log('Tracking: add_to_cart ausgelöst');
-  }
-});.
+  });
+});
