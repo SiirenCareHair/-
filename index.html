@@ -655,17 +655,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   trackableBag.addEventListener('click', function(event) {
   
-    gtag('event', 'add_to_cart', {
+    gtag('event', 'add_to_cart', 
       'event_category': 'E-Commerce',
       'event_label': 'Warenkorb hinzufügen',
       'value': 1
-    });
+    
 
     
     console.log('Tracking: add_to_cart ausgelöst');
 
     gtag('config', 'G-DY3T202NLN', { 'debug_mode': true });
-  });
+  
 </script>
 																
 		
