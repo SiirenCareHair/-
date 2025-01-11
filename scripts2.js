@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Tracking mit Google Analytics
     gtag('event', 'click', {
       'event_name': 'cookies',
-      'cookie_choice': choice // Speichert die spezifische Auswahl
+      'choice': choice
     });
 
     // Debugging
