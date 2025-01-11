@@ -339,6 +339,21 @@ bagicon
 				    right: 10px; 					/* Abstand zum rechten Rand */
 				}
 
+
+			/*-------------------------hover conditioner--------------------*/
+.hover-effect {
+  cursor: pointer; /* Zeigt den Zeiger an, wenn man über das Bild fährt */
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Für sanfte Übergänge */
+}
+
+/* Hover-Effekt */
+.hover-effect:hover {
+  transform: scale(1.1); /* Vergrößert das Bild leicht */
+  opacity: 0.8; /* Reduziert die Deckkraft für einen Effekt */
+}
+
+
+
    		
 /*----------------------------------------------------------------------------------------------------*/
         		
@@ -786,37 +801,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--Conditioner----------------------------------------------------------------------------------------->	
 
 
-			<div class="col-sm-6">															<!--2. produkt conditioner-->
-				<div id="conditioner">
-					<img class="img-rounded" src="img/conditioner.png" alt="Conditionerflasche" id="img-conditioner">
+			
+			<div class="col-sm-6">											
+  <div id="conditioner">
+    <!-- Conditioner-Bild mit Tracking -->
+    <img 
+      class="img-rounded hover-effect" 
+      src="img/conditioner.png" 
+      alt="Conditionerflasche" 
+      id="img-conditioner" 
+      onclick="trackSelectItemConditioner()">
 
-					<div id="RechtsTexte">
-						<div class="Textundicon" >	
-							
-								<h1>Conditioner</h1>
-<a href="#Warenkorb" class="trackable-bag" onclick="trackAddToCartRight()">
-  <img src="img/bag2.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
-</a>
+    <div id="RechtsTexte">
+      <div class="Textundicon">
+        <h1>Conditioner</h1>
+        <!-- Warenkorb, unverändert -->
+        <a href="#Warenkorb" class="trackable-bag" onclick="trackAddToCartRight()">
+          <img src="img/bag2.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
+        </a>
 
+        <script>
+          function trackAddToCartRight() {
+            gtag('event', 'add_to_cart', {
+              'event_category': 'E-Commerce',
+              'event_label': 'Warenkorb Rechts',
+              'value': 1
+            });
+            console.log('Tracking: add_to_cart für rechten Warenkorb ausgelöst');
+          }
+        </script>
+      </div>
+
+      <p>Cherry blossom</p>
+      <p>350 ml</p>
+      <p>4,95€</p>
+    </div>
+  </div>
+</div>
+
+<!-- Tracking-Funktion für das Conditioner-Bild -->
 <script>
-  function trackAddToCartRight() {
-    gtag('event', 'add_to_cart', {
-      'event_category': 'E-Commerce',
-      'event_label': 'Warenkorb Rechts',
-      'value': 1
+  function trackSelectItemConditioner() {
+    gtag('event', 'select_item', {
+      'event_name': 'E-Commerce'
     });
-    console.log('Tracking: add_to_cart für rechten Warenkorb ausgelöst');
+    console.log('Tracking: select_item für Conditioner ausgelöst');
   }
 </script>
-		</div>
-
-								<p>Cherry blossom</p>
-								<p>350 ml</p>
-								<p>4,95€</p>
-					</div>
-    			</div>
-			</div>
-
 <!--Pfeile----------------------------------------------------------------------------------------->	
 			<div class="product-navigation">
 
