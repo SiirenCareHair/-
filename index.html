@@ -643,8 +643,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 		</header>
 <!--tracking tags --------------------------------------------------------------------------------------->
+<a href="#Warenkorb" class="trackable-bag">
+  <img src="img/bag.png" alt="Warenkorb 1" width="50" class="bagicon">
+</a>
 
+<a href="#Warenkorb" class="trackable-bag">
+  <img src="img/bag 2.png" alt="Warenkorb 2" width="50" class="bagicon">
+</a>
+<script>
+  // Hole alle Elemente mit der Klasse 'trackable-bag'
+  const bags = document.querySelectorAll('.trackable-bag');
 
+  // Füge jedem Warenkorb einen Klick-Event-Listener hinzu
+  bags.forEach(function(bag) {
+    bag.addEventListener('click', function(event) {
+      // Google Analytics Ereignis 'add_to_cart' auslösen
+      gtag('event', 'add_to_cart', {
+        'event_category': 'E-Commerce',
+        'event_label': 'Warenkorb Klick',
+        'value': 1
+      });
+
+      // Debugging: Zeige an, dass das Event ausgelöst wurde
+      console.log('Tracking: add_to_cart ausgelöst');
+    });
+  });
+</script>
 		
 	<!--Navigation --------------------------------------------------------------------------------------->	
 	
@@ -766,7 +790,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							
 								<h1>Conditioner</h1>
 								<a href="#Warenkorb">
-								<img src="img/bag.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
+								<img src="img bag 2.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
 								</a>
 						</div>
 
