@@ -203,168 +203,84 @@ bagicon
 
         		/*Bilder der Produkte*/
 
-        		#ZweiSplaten{
-
-        			margin-bottom: 50px;
-        		
-        		}
-
-        		section h1{									/*Überschrift Unsere Produkte*/
-        	
-        			margin-bottom: 40px;
-
-        		}
-
-    
-
-        		#shampoo{									/*Bild vom Shampoo*/
-        		position: relative;
-        		left: 70px;
-        		text-align: center;
-				margin-right: 20%;
-				margin-top: 40px;
-
-				margin-bottom: 40px;
-        		}
         		
 
-        		#img-shampoo{							/*Bild vom Shampoo*/
-        			width: 70%;
-        			margin-right: -40px;
-        		}
+			/* Karussell-Container */
+.carousel-container {
+  position: relative;
+  overflow: hidden; /* Nur sichtbare Elemente anzeigen */
+  width: 100%;
+  max-width: 1200px; /* Maximalbreite des Karussells */
+  margin: 0 auto;
+}
 
+/* Karussell-Elemente */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Sanfter Übergang beim Scrollen */
+}
 
+/* Karussell-Einzelbilder */
+.carousel-item {
+  min-width: 50%; /* Zwei Elemente gleichzeitig anzeigen */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
 
-        		#conditioner{							/*Bild vom Conditioner*/							
-        		position: relative;
-        		left: -10px;
-        		text-align: right;
-				margin-right: 20%;
-				margin-top: 40px;
-				margin-bottom: 40px;
-        		}
+.carousel-item img {
+  width: 70%; /* Einheitliche Größe */
+  border-radius: 10px; /* Abgerundete Ecken */
+}
 
-        		#img-conditioner{						/*Bild vom Conditioner*/
-        			width: 70%;
-        		}
-
-        		
-
-
-        		#ZweiSpalten h1{					/*Überschrift Produkte: Shampoo und Conditioner */
-        			text-align: center;
-        			
-        			margin-top: 40px; 
-        			margin-bottom: 3px;	
-        		}
-
-        	
-
-
-				#ZweiSpalten p{						/*Anordnung des 350ml Cherryblossom text */
-        			text-align: center;
-        			
-        			margin-bottom: 0px;
-        		}
-
-
-
-        		#LinksTexte{						/*Box aus allen texten und icon unter dem Bild*/
-        			margin-left: 40px;
-        			text-align: center;
-        		}
-
-        		#links{
-        			right: 70px;
-        		}
-
-        		#RechtsTexte{						/*Box aus allen texten und icon unter dem Bild*/	
-        			margin-left: 140px;
-        		}
-
-        		#RechtsTexte p{
-        			text-align: center; /* Zentriert alle Texte */
-        		}
-
-        		#LinksTexte, #RechtsTexte {
-    			text-align: center; /* Zentriert alle Texte */
-    
-				}
-
-
-
-
-
-        		.bagicon{							/*Position der beiden einkaufstaschen icons*/
-        		
-    				border-radius: 50%; 			/* Macht das Element rund */
-
-    				position: absolute;
-					top: 80%; 							/* Vertikal ausrichten */
-   					right: 0px; 						/* Abstand vom rechten Rand */	
-        		}
-
-        		
-
-        		.Textundicon img:hover{      			/*hover effekt auf dem button*/                                            
-            		background-color: #d97994;
-            		opacity: 0.7;
-        		}
-
-
-        			
-        		.product-navigation {					/*Pfeile*/  
-   				display: flex;
-   				align-items: center; 					/* Zentriert die Pfeile vertikal */
-   				justify-content: space-between; 		/* Pfeile links und rechts */
-    			position: relative;
-    			width: 100%; 							/* Breite des Containers */
-				}
-
-				.arrow {
-			    position: absolute;
-			    top: -350px;
-			    transform: translateY(-50%);		 /* Korrigiert die Zentrierung */
-			    width: 30px; 						/* Größe der Pfeile */
-			    cursor: pointer;
-			     z-index: 10; 						/* Bringt die Pfeile in den Vordergrund */
-
-				}
-
-				.left-arrow {						/*Pfeil links*/
-				    left: 10px; 					/* Abstand zum linken Rand */
-				}
-
-				.right-arrow {						/*Pfeil rechts*/
-				    right: 10px; 					/* Abstand zum rechten Rand */
-				}
-
-
-			/*-------------------------hover conditioner--------------------*/
+/* Hover-Effekt für Bilder */
 .hover-effect {
-  cursor: pointer; /* Zeigt den Zeiger an, wenn man über das Bild fährt */
-  transition: transform 0.2s ease, opacity 0.2s ease; /* Für sanfte Übergänge */
+  cursor: pointer; /* Zeigt an, dass das Bild klickbar ist */
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Sanfte Übergänge */
 }
 
-/* Hover-Effekt */
 .hover-effect:hover {
-  transform: scale(1.1); /* Vergrößert das Bild leicht */
-  opacity: 0.8; /* Reduziert die Deckkraft für einen Effekt */
+  transform: scale(1.1); /* Vergrößert das Bild */
+  opacity: 0.8; /* Reduziert die Deckkraft */
 }
 
-/*---------------------------------hover shampoo-------------------------------*/
-/* Standard-Eigenschaften für Bilder mit Hover-Effekt */
-.hover-effect {
-  cursor: pointer; /* Zeigt den Zeiger an, wenn man über das Bild fährt */
-  transition: transform 0.2s ease, opacity 0.2s ease; /* Sanfter Übergang */
+/* Navigationspfeile */
+.carousel-navigation {
+  position: absolute;
+  top: 50%; /* Zentriert die Pfeile vertikal */
+  width: 100%; /* Breite des Karussells */
+  display: flex;
+  justify-content: space-between; /* Pfeile links und rechts */
+  transform: translateY(-50%); /* Korrektur der vertikalen Zentrierung */
+  pointer-events: none; /* Verhindert, dass der Container klickbar ist */
 }
 
-/* Hover-Effekt */
-.hover-effect:hover {
-  transform: scale(1.1); /* Vergrößert das Bild leicht */
-  opacity: 0.8; /* Reduziert die Deckkraft für einen visuellen Effekt */
+.arrow {
+  background: none; /* Kein Hintergrund */
+  border: none; /* Kein Rahmen */
+  cursor: pointer; /* Zeigt den Zeiger an */
+  width: 50px; /* Größe der Pfeile */
+  height: 50px;
+  pointer-events: all; /* Pfeile selbst klickbar */
+  z-index: 10; /* Bringt die Pfeile in den Vordergrund */
 }
-   		
+
+.arrow img {
+  width: 100%; /* Bild passt in den Button */
+  height: auto;
+}
+
+/* Linker Pfeil */
+.left-arrow {
+  position: absolute;
+  left: 10px; /* Abstand vom linken Rand */
+}
+
+/* Rechter Pfeil */
+.right-arrow {
+  position: absolute;
+  right: 10px; /* Abstand vom rechten Rand */
+}
 /*----------------------------------------------------------------------------------------------------*/
         		
 
@@ -745,17 +661,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1>Deine Lösung für <br> gepflegtes Haar</h1>
          <a href="#ZweiSpalten"> <button>Mehr entdecken</button> </a>
     	</section>
+
+
 <!-------------------------- Produkte ----------------------------------------------------->
 <section id="ZweiSpalten">
   <div class="container">
     <div class="carousel-container">
       <div class="carousel">
-        <!-- Shampoo Produkt 1 -->
+        <!-- Shampoo 1 -->
         <div class="carousel-item">
           <img 
             class="img-rounded hover-effect" 
             src="img/shampoo.png" 
-            alt="Shampooflasche 1">
+            alt="Shampooflasche 1" 
+            onclick="trackSelectItem('Shampoo 1')">
           <div>
             <h1>Shampoo</h1>
             <p>Cherry blossom</p>
@@ -764,12 +683,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
-        <!-- Conditioner Produkt 1 -->
+        <!-- Conditioner 1 -->
         <div class="carousel-item">
           <img 
             class="img-rounded hover-effect" 
             src="img/conditioner.png" 
-            alt="Conditionerflasche 1">
+            alt="Conditionerflasche 1" 
+            onclick="trackSelectItem('Conditioner 1')">
           <div>
             <h1>Conditioner</h1>
             <p>Cherry blossom</p>
@@ -778,12 +698,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
-        <!-- Shampoo Produkt 2 -->
+        <!-- Shampoo 2 -->
         <div class="carousel-item">
           <img 
             class="img-rounded hover-effect" 
-            src="img/FINAL_shampoo_locken.png" 
-            alt="Shampooflasche 2">
+            src="img/shampoo2.png" 
+            alt="Shampooflasche 2" 
+            onclick="trackSelectItem('Shampoo 2')">
           <div>
             <h1>Shampoo</h1>
             <p>Lavender</p>
@@ -792,12 +713,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
-        <!-- Conditioner Produkt 2 -->
+        <!-- Conditioner 2 -->
         <div class="carousel-item">
           <img 
             class="img-rounded hover-effect" 
-            src="img/FINAL_Conditioner_locken.png" 
-            alt="Conditionerflasche 2">
+            src="img/conditioner2.png" 
+            alt="Conditionerflasche 2" 
+            onclick="trackSelectItem('Conditioner 2')">
           <div>
             <h1>Conditioner</h1>
             <p>Lavender</p>
@@ -806,12 +728,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
-        <!-- Shampoo Produkt 3 -->
+        <!-- Shampoo 3 -->
         <div class="carousel-item">
           <img 
             class="img-rounded hover-effect" 
-            src="img/FINAL_shampoo_volumen.png" 
-            alt="Shampooflasche 3">
+            src="img/shampoo3.png" 
+            alt="Shampooflasche 3" 
+            onclick="trackSelectItem('Shampoo 3')">
           <div>
             <h1>Shampoo</h1>
             <p>Mint</p>
@@ -820,12 +743,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
-        <!-- Conditioner Produkt 3 -->
+        <!-- Conditioner 3 -->
         <div class="carousel-item">
           <img 
             class="img-rounded hover-effect" 
-            src="img/FINAL_conditioner_volumen.png" 
-            alt="Conditionerflasche 3">
+            src="img/conditioner3.png" 
+            alt="Conditionerflasche 3" 
+            onclick="trackSelectItem('Conditioner 3')">
           <div>
             <h1>Conditioner</h1>
             <p>Mint</p>
@@ -835,20 +759,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
-
-    <!-- Navigationspfeile mit Tracking -->
-    <div class="carousel-navigation">
-      <button class="arrow left-arrow" onclick="moveCarousel(-1, 'left')">
-        <img src="img/Pfeillinks.png" alt="Pfeil der nach links zeigt">
-      </button>
-      <button class="arrow right-arrow" onclick="moveCarousel(1, 'right')">
-        <img src="img/Pfeilrechts.png" alt="Pfeil der nach rechts zeigt">
-      </button>
-    </div>
   </div>
 </section>
 
-	
+
+
 <!--Produkt Eigenschaften---------------------------------------------------------------------------------------->
 
 
@@ -893,6 +808,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+
 
 <!--Über uns---------------------------------------------------------------------------------------->
 	
@@ -1059,10 +976,12 @@ effektiv pflegen und schützend.</p>
       'arrow': arrowType // Erfasst, welcher Pfeil geklickt wurde (left oder right)
     });
 
-    // Debugging: Zeigt an, welcher Pfeil geklickt wurde
+    // Debugging: Zeige in der Konsole an, welcher Pfeil geklickt wurde
     console.log(`Karussell bewegt: ${arrowType}`);
   }
 </script>
+
+
 
 </body>
 </html>
