@@ -881,55 +881,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <section id="DreiSpalten">			
-	<div class="container">
+  <div class="container">
+    <section class="mitte"> 
+      <div id="Benefits"> <!-- Benefits Überschrift -->
+        <h1>Benefits</h1>
+      </div>
+    </section>
 
+    <div class="row"> 
+      <!-- Nachhaltig -->
+      <div class="col-sm-4">
+        <div id="Nachhaltig">
+          <img src="img/nachhaltig.jpg" alt="Bild von Blättern">
+          <a href="#ZweiSpalten">
+            <button class="centered-button" onclick="trackSelectContent('nachhaltig')">nachhaltig</button>
+          </a>
+        </div>
+      </div>
 
-		<section class="mitte"> 
-			<div id="Benefits">		<!--Benefits Überschrift-->
-				<h1>Benefits</h1>
-			</div>
-		</section>
+      <!-- Tierversuchsfrei -->
+      <div class="col-sm-4">
+        <div id="Tierversuchsfrei">
+          <img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen">
+          <a href="#ZweiSpalten">
+            <button class="centered-button" onclick="trackSelectContent('tierversuchsfrei')">tierversuchsfrei</button>
+          </a>
+        </div>
+      </div>
 
-		<div class="row"> 
-
-<!--Nachhaltig-->
-
-			<div class="col-sm-4">
-				<div id="Nachhaltig">
-					<img src="img/nachhaltig.jpg" alt="Bild von Blättern">
-					<a href="#ZweiSpalten">
-					 <button class="centered-button">nachhaltig</button>
-					</a>
-    			</div>
-			</div>
-
-<!--Tierversuchsfrei-->
-
-			<div class="col-sm-4">
-				<div id="Tierversuchsfrei">
-					<img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen">
-					<a href="#ZweiSpalten">
-					 <button class="centered-button">tierversuchsfrei</button>
-					</a>
-    			</div>
-			</div>
-
-<!--Pflegend-->
-
-			<div class="col-sm-4">
-				<div id="Pflegend">
-					<img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau">
-					<a href="#ZweiSpalten">
-					<button class="centered-button">pflegend</button>
-					</a>
-    			</div>
-			</div>
-			
-<!---->
-
-		</div>
-	</div>
-</section>	
+      <!-- Pflegend -->
+      <div class="col-sm-4">
+        <div id="Pflegend">
+          <img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau">
+          <a href="#ZweiSpalten">
+            <button class="centered-button" onclick="trackSelectContent('pflegend')">pflegend</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!--Über uns---------------------------------------------------------------------------------------->
 	
@@ -1062,5 +1053,18 @@ effektiv pflegen und schützend.</p>
 
 
 <script src="script.js" defer></script>
+
+<script>
+  function trackSelectContent(buttonName) {
+    // Google Analytics Ereignis auslösen
+    gtag('event', 'select_content', {
+      'event_name': 'E-Commerce',
+      'content_type': buttonName // Senden des Buttons, der geklickt wurde
+    });
+
+    // Debugging: Zeige in der Konsole an, welcher Button geklickt wurde
+    console.log(`Tracking: select_content ausgelöst für ${buttonName}`);
+  }
+</script>
 </body>
 </html>
