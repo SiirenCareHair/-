@@ -20,6 +20,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5S3LPRSG');</script>
 <!-- End Google Tag Manager -->
 
+<!-------------cookies---------------------------------------------------------------------------->
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Pop-up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cookie-Pop-up -->
+  <div id="cookie-popup" class="cookie-popup">
+    <div class="cookie-content">
+      <p>Do you want a cookie?</p>
+      <div class="cookie-buttons">
+        <button id="yes-please" class="cookie-button" onclick="trackCookieChoice('yes')">Yes please</button>
+        <button id="no-thanks" class="cookie-button" onclick="trackCookieChoice('no')">No thanks</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+
+
+	    
+
+
+
 
 	    <meta charset="utf-8">
 		<title>SiirenCare</title> 
@@ -47,6 +76,74 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border: none; /* Entfernt den Rahmen */
     padding: 0; /* Entfernt den Innenabstand */
     cursor: pointer; /* Zeigt den Zeiger für klickbare Elemente an */
+}
+
+
+
+
+/*----------------------cookies style-----------------------------------------------*/
+/* Styling für das Cookie-Pop-up */
+body {
+  font-family: "Domine", serif;
+}
+
+.cookie-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px; /* Begrenze die Breite für größere Bildschirme */
+  background-color: #D4E7C2;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  visibility: hidden; /* Unsichtbar, bis es angezeigt wird */
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.cookie-popup.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.cookie-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cookie-content p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Buttons */
+.cookie-buttons {
+  display: flex;
+  gap: 20px; /* Abstand zwischen den Buttons */
+}
+
+.cookie-button {
+  background-color: #F1D8D0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-button:hover {
+  background-color: #e6c3bb; /* Leichter Hover-Effekt */
 }
 
 /*----------------------------------------------------------------------------------*/
@@ -1050,6 +1147,9 @@ effektiv pflegen und schützend.</p>
 		<p>Copyright © 2024/2025 Siirencare | designed by Gruppe 7 </p>
 	
 </footer>
+
+
+<script src="scripts2.js"></script>
 
 
 <script src="script.js" defer></script>
