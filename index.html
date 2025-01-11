@@ -352,8 +352,18 @@ bagicon
   opacity: 0.8; /* Reduziert die Deckkraft für einen Effekt */
 }
 
+/*---------------------------------hover shampoo-------------------------------*/
+/* Standard-Eigenschaften für Bilder mit Hover-Effekt */
+.hover-effect {
+  cursor: pointer; /* Zeigt den Zeiger an, wenn man über das Bild fährt */
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Sanfter Übergang */
+}
 
-
+/* Hover-Effekt */
+.hover-effect:hover {
+  transform: scale(1.1); /* Vergrößert das Bild leicht */
+  opacity: 0.8; /* Reduziert die Deckkraft für einen visuellen Effekt */
+}
    		
 /*----------------------------------------------------------------------------------------------------*/
         		
@@ -753,13 +763,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="col-sm-6">
   <div id="shampoo">
-    <!-- Shampoo-Bild mit Tracking -->
+    <!-- Shampoo-Bild mit Tracking und Hover-Effekt -->
     <img 
-      class="img-rounded" 
+      class="img-rounded hover-effect" 
       src="img/shampoo.png" 
       alt="Shampooflasche" 
       id="img-shampoo" 
-      onclick="trackSelectItem()">
+      onclick="trackSelectItemShampoo()">
       
     <div id="LinksTexte">
       <div class="Textundicon">
@@ -790,14 +800,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Tracking-Funktion für das Shampoo-Bild -->
 <script>
-  function trackSelectItem() {
+  function trackSelectItemShampoo() {
     gtag('event', 'select_item', {
       'event_name': 'E-Commerce'
     });
-    console.log('Tracking: select_item ausgelöst');
+    console.log('Tracking: select_item für Shampoo ausgelöst');
   }
 </script>
-
 <!--Conditioner----------------------------------------------------------------------------------------->	
 
 
