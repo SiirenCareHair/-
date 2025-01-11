@@ -736,37 +736,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--Produkte shampoo---------------------------------------------------------------------------------------->		
 
 
+<div class="col-sm-6">
+  <div id="shampoo">
+    <!-- Shampoo-Bild mit Tracking -->
+    <img 
+      class="img-rounded" 
+      src="img/shampoo.png" 
+      alt="Shampooflasche" 
+      id="img-shampoo" 
+      onclick="trackSelectItem()">
+      
+    <div id="LinksTexte">
+      <div class="Textundicon">
+        <h1>Shampoo</h1>
+        <!-- Warenkorb, unverändert -->
+        <a href="#Warenkorb" class="trackable-bag" onclick="trackAddToCart()">
+          <img src="img/bag.png" alt="Icon grüner Warenkorb" width="50" class="bagicon" id="links">
+        </a>
+        
+        <script>
+          function trackAddToCart() {
+            gtag('event', 'add_to_cart', {
+              'event_category': 'E-Commerce',
+              'event_label': 'Warenkorb Klick',
+              'value': 1
+            });
+            console.log('Tracking: add_to_cart ausgelöst');
+          }
+        </script>
+      </div>
 
-				<div class="col-sm-6">
-					<div id="shampoo">
-						<img class="img-rounded" src="img/shampoo.png" alt="Shampooflasche" id="img-shampoo">
-							
-							<div id="LinksTexte">
-								<div class="Textundicon" >	
-									<h1>Shampoo</h1>
-								<a href="#Warenkorb" class="trackable-bag" onclick="trackAddToCart()">
-  <img src="img/bag.png" alt="Icon grüner Warenkorb" width="50" class="bagicon" id="links">
-</a>
+      <p>Cherry blossom</p>
+      <p>350 ml</p>
+      <p>4,95€</p>
+    </div>
+  </div>
+</div>
 
+<!-- Tracking-Funktion für das Shampoo-Bild -->
 <script>
-  function trackAddToCart() {
-    gtag('event', 'add_to_cart', {
-      'event_category': 'E-Commerce',
-      'event_label': 'Warenkorb Klick',
-      'value': 1
+  function trackSelectItem() {
+    gtag('event', 'select_item', {
+      'event_name': 'E-Commerce'
     });
-    console.log('Tracking: add_to_cart ausgelöst');
+    console.log('Tracking: select_item ausgelöst');
   }
 </script>
-								</div>
-
-							<p>Cherry blossom</p>
-							<p>350 ml</p>
-							<p>4,95€</p>
-								
-							</div>	
-		    		</div>
-				</div>
 
 <!--Conditioner----------------------------------------------------------------------------------------->	
 
