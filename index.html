@@ -644,37 +644,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</header>
 <!--tracking tags --------------------------------------------------------------------------------------->
 
-<a href="#Warenkorb" id="trackable-bag">
-  <img src="img/bag.png" alt="Icon grüner Warenkorb" width="50" class="bagicon" id="links" style="cursor: pointer;">
-</a>
 
-<script>
-  // Hole das Element mit der ID 'trackable-bag'
-  const trackableBag = document.getElementById('trackable-bag');
-
-  // Füge einen Klick-Event-Listener hinzu
-  trackableBag.addEventListener('click', function(event) {
-    // Google Analytics Ereignis 'add_to_cart' auslösen
-    gtag('event', 'add_to_cart', {
-      'event_category': 'E-Commerce',
-      'event_label': 'Warenkorb hinzufügen',
-      'value': 1
-    });
-
-    // Debugging: Zeige an, dass das Event ausgelöst wurde
-    console.log('Tracking: add_to_cart ausgelöst');
-  });
-</script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DY3T202NLN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-DY3T202NLN', { 'debug_mode': true }); // Deine Mess-ID mit Debugging
-</script>
-																
 		
 	<!--Navigation --------------------------------------------------------------------------------------->	
 	
