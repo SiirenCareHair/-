@@ -894,36 +894,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!--Nachhaltig-->
 
-			<div class="col-sm-4">
-				<div id="Nachhaltig">
-					<img src="img/nachhaltig.jpg" alt="Bild von Blättern">
-					<a href="#ZweiSpalten">
-					 <button class="centered-button">nachhaltig</button>
-					</a>
-    			</div>
-			</div>
+		<div class="col-sm-4">
+  <div id="Nachhaltig">
+    <img src="img/nachhaltig.jpg" alt="Bild von Blättern">
+    <a href="#ZweiSpalten">
+      <!-- Nachhaltig-Button mit Tracking -->
+      <button class="centered-button" onclick="trackSelectContent()">nachhaltig</button>
+    </a>
+  </div>
+</div>
+
+<!-- Tracking-Funktion für den Nachhaltig-Button -->
+<script>
+  function trackSelectContent() {
+    // Sende das Ereignis an Google Analytics
+    gtag('event', 'select_content', {
+      'event_name': 'E-Commerce' // Parameter und Wert
+    });
+
+    // Debugging: Zeige in der Konsole an, dass das Event ausgelöst wurde
+    console.log('Tracking: select_content ausgelöst');
+  }
+</script>
 
 <!--Tierversuchsfrei-->
 
-			<div class="col-sm-4">
-				<div id="Tierversuchsfrei">
-					<img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen">
-					<a href="#ZweiSpalten">
-					 <button class="centered-button">tierversuchsfrei</button>
-					</a>
-    			</div>
-			</div>
+			<<div class="col-sm-4">
+  <div id="Tierversuchsfrei">
+    <img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen">
+    <a href="#ZweiSpalten">
+      <!-- Tierversuchsfrei-Button mit Tracking -->
+      <button class="centered-button" onclick="trackSelectContentTierversuchsfrei()">tierversuchsfrei</button>
+    </a>
+  </div>
+</div>
+
+<!-- Tracking-Funktion für den Tierversuchsfrei-Button -->
+<script>
+  function trackSelectContentTierversuchsfrei() {
+    // Sende das Ereignis an Google Analytics
+    gtag('event', 'select_content', {
+      'event_name': 'E-Commerce' // Parameter und Wert
+    });
+
+    // Debugging: Zeige in der Konsole an, dass das Event ausgelöst wurde
+    console.log('Tracking: select_content für Tierversuchsfrei ausgelöst');
+  }
+</script>
 
 <!--Pflegend-->
 
-			<div class="col-sm-4">
-				<div id="Pflegend">
-					<img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau">
-					<a href="#ZweiSpalten">
-					<button class="centered-button">pflegend</button>
-					</a>
-    			</div>
-			</div>
+			<<div class="col-sm-4">
+  <div id="Pflegend">
+    <img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau">
+    <a href="#ZweiSpalten">
+      <!-- Pflegend-Button mit Tracking -->
+      <button class="centered-button" onclick="trackSelectContentPflegend()">pflegend</button>
+    </a>
+  </div>
+</div>
+
+<!-- Tracking-Funktion für den Pflegend-Button -->
+<script>
+  function trackSelectContentPflegend() {
+    // Sende das Ereignis an Google Analytics
+    gtag('event', 'select_content', {
+      'event_name': 'E-Commerce' // Parameter und Wert
+    });
+
+    // Debugging: Zeige in der Konsole an, dass das Event ausgelöst wurde
+    console.log('Tracking: select_content für Pflegend ausgelöst');
+  }
+</script>
 			
 <!---->
 
