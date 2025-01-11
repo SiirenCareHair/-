@@ -636,10 +636,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</a>
 
 		<div id="Warenkorb">
-			
-			<a href="#ZweiSpalten"><img src="img/Wagen.png" alt="Warenkorb icon" width="40"></a>
-			
-		</div>
+  <a href="#ZweiSpalten" onclick="trackViewCart()">
+    <img src="img/Wagen.png" alt="Warenkorb icon" width="40">
+  </a>
+</div>
+
+<script>
+  function trackViewCart() {
+    // Sende das Ereignis an Google Analytics
+    gtag('event', 'view_cart', {
+      'event_name': 'E-Commerce'
+    });
+
+    // Debugging: Zeige in der Konsole an, dass das Event ausgelöst wurde
+    console.log('Tracking: view_cart ausgelöst');
+  }
+</script>
 		
 		</header>
 
