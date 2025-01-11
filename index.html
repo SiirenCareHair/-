@@ -411,47 +411,54 @@ bagicon
 /*----------------------------*/
         		
 				/*Buttons auf den Bildern*/
-				..centered-button {
-  background-color: rgba(255, 255, 255, 0.8); /* Weiße Hintergrundfarbe mit Transparenz */
-  border: none; /* Entfernt Rahmen */
-  padding: 10px 20px; /* Innenabstand für den Button */
-  border-radius: 50px; /* Runde Ecken */
-  font-size: 30px; /* Schriftgröße */
-  color: black; /* Schriftfarbe */
-  display: flex; /* Flexibles Layout */
-  justify-content: center; /* Zentriert Text innerhalb des Buttons */
-  align-items: center; /* Zentriert Text vertikal */
-  cursor: pointer; /* Zeigt an, dass der Button klickbar ist */
-  transition: all 0.3s ease; /* Sanfter Übergang für Hover-Effekt */
-  position: absolute; /* Absolut relativ zum Container */
-}
+				.centered-button {
+				   
+				  
+				    background-color: rgba(255, 255, 255, 0.8); 		/* Weiße Hintergrundfarbe mit Transparenz */
+				    border: none; 										/* Entfernt Rahmen */
+				    padding: 10px 20px; 								/* Innenabstand für den Button */
+				    border-radius: 50px; 								/* Runde Ecken */
+				    font-size: 30px;
+				    color: black;										 /* Schriftfarbe */
+				    display: flex;
+				}
 
-.centered-button:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Dunklerer Hintergrund beim Hover */
-  color: white; /* Weiße Schrift beim Hover */
-}
+        																	
+				.centered-button:hover {								/* Hover-Effekt */
+				    background-color: rgba(0, 0, 0, 0.8);
+				    color: white;
+				}
 
-/* Button für den Bereich "Nachhaltig" */
-#Nachhaltig button {
-  top: 80%; /* Position vertikal */
-  left: 19%; /* Position horizontal */
-  transform: translate(-50%, -50%); /* Perfekte Zentrierung */
-}
+				#Nachhaltig button{
 
-/* Button für den Bereich "Tierversuchsfrei" */
-#Tierversuchsfrei button {
-  top: 80%; /* Position vertikal */
-  left: 50%; /* Position horizontal */
-  transform: translate(-50%, -50%); /* Perfekte Zentrierung */
-}
+					position: absolute; 								/* Button wird relativ zum Container positioniert */
+				    top: 80%; 											/* Zentriert den Button vertikal */
+				    left: 19%; 											/* Zentriert den Button horizontal */
+				    transform: translate(-50%, -50%); 					/* Korrigiert die Zentrierung */
 
-/* Button für den Bereich "Pflegend" */
-#Pflegend button {
-  top: 80%; /* Position vertikal */
-  left: 81%; /* Position horizontal */
-  transform: translate(-50%, -50%); /* Perfekte Zentrierung */
-}
-				
+
+				}
+
+				#Tierversuchsfrei button{
+
+					position: absolute; 								/* Button wird relativ zum Container positioniert */
+					justify-content: center;
+				    top: 80%; 											/* Zentriert den Button vertikal */
+				    left: 50%; 											/* Zentriert den Button horizontal */
+				    transform: translate(-50%, -50%); 					/* Korrigiert die Zentrierung */
+
+
+				}
+
+				#Pflegend button{
+
+					position: absolute; 								/* Button wird relativ zum Container positioniert */
+				    top: 80%; 											/* Zentriert den Button vertikal */
+				    left: 81%;											/* Zentriert den Button horizontal */
+				    transform: translate(-50%, -50%); 					/* Korrigiert die Zentrierung */
+
+
+				}
 
 /*----------------------------------------------------------------------------------------------------*/
         		
@@ -873,29 +880,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--Produkt Eigenschaften---------------------------------------------------------------------------------------->
 
 
-<section id="DreiSpalten">
-  <div class="container">
-    <div class="row">
-      <!-- Nachhaltig -->
-      <div id="Nachhaltig" class="col-sm-4">
-        <img src="img/nachhaltig.jpg" alt="Bild von Blättern" class="img-fluid">
-        <button class="centered-button" onclick="trackSelectContentNachhaltig()">nachhaltig</button>
-      </div>
+<section id="DreiSpalten">			
+	<div class="container">
 
-      <!-- Tierversuchsfrei -->
-      <div id="Tierversuchsfrei" class="col-sm-4">
-        <img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen" class="img-fluid">
-        <button class="centered-button" onclick="trackSelectContentTierversuchsfrei()">tierversuchsfrei</button>
-      </div>
 
-      <!-- Pflegend -->
-      <div id="Pflegend" class="col-sm-4">
-        <img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau" class="img-fluid">
-        <button class="centered-button" onclick="trackSelectContentPflegend()">pflegend</button>
-      </div>
-    </div>
-  </div>
-</section>
+		<section class="mitte"> 
+			<div id="Benefits">		<!--Benefits Überschrift-->
+				<h1>Benefits</h1>
+			</div>
+		</section>
+
+		<div class="row"> 
+
+<!--Nachhaltig-->
+
+			<div class="col-sm-4">
+				<div id="Nachhaltig">
+					<img src="img/nachhaltig.jpg" alt="Bild von Blättern">
+					<a href="#ZweiSpalten">
+					 <button class="centered-button">nachhaltig</button>
+					</a>
+    			</div>
+			</div>
+
+<!--Tierversuchsfrei-->
+
+			<div class="col-sm-4">
+				<div id="Tierversuchsfrei">
+					<img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen">
+					<a href="#ZweiSpalten">
+					 <button class="centered-button">tierversuchsfrei</button>
+					</a>
+    			</div>
+			</div>
+
+<!--Pflegend-->
+
+			<div class="col-sm-4">
+				<div id="Pflegend">
+					<img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau">
+					<a href="#ZweiSpalten">
+					<button class="centered-button">pflegend</button>
+					</a>
+    			</div>
+			</div>
+			
+<!---->
+
+		</div>
+	</div>
+</section>	
 
 <!--Über uns---------------------------------------------------------------------------------------->
 	
@@ -1028,31 +1062,5 @@ effektiv pflegen und schützend.</p>
 
 
 <script src="script.js" defer></script>
-
-<script>
-  function trackSelectContentNachhaltig() {
-    gtag('event', 'select_content', {
-      'event_name': 'E-Commerce',
-      'content_type': 'Nachhaltig',
-    });
-    console.log('Tracking: select_content für Nachhaltig ausgelöst');
-  }
-
-  function trackSelectContentTierversuchsfrei() {
-    gtag('event', 'select_content', {
-      'event_name': 'E-Commerce',
-      'content_type': 'Tierversuchsfrei',
-    });
-    console.log('Tracking: select_content für Tierversuchsfrei ausgelöst');
-  }
-
-  function trackSelectContentPflegend() {
-    gtag('event', 'select_content', {
-      'event_name': 'E-Commerce',
-      'content_type': 'Pflegend',
-    });
-    console.log('Tracking: select_content für Pflegend ausgelöst');
-  }
-</script>
 </body>
 </html>
