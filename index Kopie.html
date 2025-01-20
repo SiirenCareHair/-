@@ -300,168 +300,62 @@ bagicon
 
         		/*Bilder der Produkte*/
 
-        		#ZweiSplaten{
-
-        			margin-bottom: 50px;
         		
-        		}
-
-        		section h1{									
-        	
-        			margin-bottom: 40px;
-
-        		}
-
-    
-
-        		#shampoo{									
-        		position: relative;
-        		left: 70px;
-        		text-align: center;
-				margin-right: 20%;
-				margin-top: 40px;
-
-				margin-bottom: 40px;
-        		}
-        		
-
-        		#img-shampoo{							
-        			width: 70%;
-        			margin-right: -40px;
-        		}
+     
+        /* Karussell-Container */
+        .carousel {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
 
 
-
-        		#conditioner{														
-        		position: relative;
-        		left: -10px;
-        		text-align: right;
-				margin-right: 20%;
-				margin-top: 40px;
-				margin-bottom: 40px;
-        		}
-
-        		#img-conditioner{						
-        			width: 70%;
-        		}
-
-        		
+        .carousel-products {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
 
 
-        		#ZweiSpalten h1{					
-        			text-align: center;
-        			
-        			margin-top: 40px; 
-        			margin-bottom: 3px;	
-        		}
-
-        	
-
-
-				#ZweiSpalten p{						
-        			text-align: center;
-        			
-        			margin-bottom: 0px;
-        		}
+        .product {
+            width: 50%;
+            flex-shrink: 0;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+        }
 
 
-
-        		#LinksTexte{						
-        			margin-left: 40px;
-        			text-align: center;
-        		}
-
-        		#links{
-        			right: 70px;
-        		}
-
-        		#RechtsTexte{							
-        			margin-left: 140px;
-        		}
-
-        		#RechtsTexte p{
-        			text-align: center; 
-        		}
-
-        		#LinksTexte, #RechtsTexte {
-    			text-align: center; /* Zentriert alle Texte */
-    
-				}
+        .product img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
 
 
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
 
+        .prev {
+            left: 10px;
+        }
 
-
-        		.bagicon{							/*Position der beiden einkaufstaschen icons*/
-        		
-    				border-radius: 50%; 			
-
-    				position: absolute;
-					top: 80%; 							/* Vertikal ausrichten */
-   					right: 0px; 						/* Abstand vom rechten Rand */	
-        		}
-
-        		
-
-        		.Textundicon img:hover{      			/*hover effekt auf dem button*/                                            
-            		background-color: #d97994;
-            		opacity: 0.7;
-        		}
-
-
-        			
-        		.product-navigation {					/*Pfeile*/  
-   				display: flex;
-   				align-items: center; 					/* Zentriert die Pfeile vertikal */
-   				justify-content: space-between; 		/* Pfeile links und rechts */
-    			position: relative;
-    			width: 100%; 							/* Breite des Containers */
-				}
-
-				.arrow {
-			    position: absolute;
-			    top: -350px;
-			    transform: translateY(-50%);		 /* Korrigiert die Zentrierung */
-			    width: 30px; 						/* Größe der Pfeile */
-			    cursor: pointer;
-			     z-index: 10; 						/* Bringt die Pfeile in den Vordergrund */
-
-				}
-
-				.left-arrow {						/*Pfeil links*/
-				    left: 10px; 					/* Abstand zum linken Rand */
-				}
-
-				.right-arrow {						/*Pfeil rechts*/
-				    right: 10px; 					/* Abstand zum rechten Rand */
-				}
-
-
-			/*-------------------------hover conditioner--------------------*/
-.hover-effect {
-  cursor: pointer; /* Zeigt den Zeiger an, wenn man über das Bild fährt */
-  transition: transform 0.2s ease, opacity 0.2s ease; /* Für sanfte Übergänge */
-}
-
-/* Hover-Effekt */
-.hover-effect:hover {
-  transform: scale(1.1); /* Vergrößert das Bild leicht */
-  opacity: 0.8; /* Reduziert die Deckkraft für einen Effekt */
-}
-
-/*---------------------------------hover shampoo-------------------------------*/
-/* Standard-Eigenschaften für Bilder mit Hover-Effekt */
-.hover-effect {
-  cursor: pointer; /* Zeigt den Zeiger an, wenn man über das Bild fährt */
-  transition: transform 0.2s ease, opacity 0.2s ease; /* Sanfter Übergang */
-}
-
-/* Hover-Effekt */
-.hover-effect:hover {
-  transform: scale(1.1); /* Vergrößert das Bild leicht */
-  opacity: 0.8; /* Reduziert die Deckkraft für einen visuellen Effekt */
-}
-   		
+        .next {
+            right: 10px;
+        }
 /*----------------------------------------------------------------------------------------------------*/
         		
 
@@ -641,35 +535,8 @@ bagicon
 
 /*----------------------------------------------------------------------------------------------------*/
 
-/*P---------------------------------------------Presse Logos----------------------------------------*/
-                #logos{
 
-                align-items: center;
-                display: flex;
-
-
-                margin-bottom: 50px;
-                 margin-top: 20px; 
-                margin-bottom: 100px; 
-                margin-left: 70px;
-                }
-
-
-
-                #logos img{
-                    max-width: 150px;
-                    height: auto;
-                 margin-right: 20px; /* Fügt einen kleinen Abstand zwischen den Logos hinzu */
-                }
-
-                #logos #logo6{
-                    max-width: 80px;
-                }
-
-        		
-
-
-        		/*---------------------------------Ganz unten grüner footer-----------------------*/
+        		/*Ganz unten grüner footer*/
         		footer{
         			background-color: green;
         			padding-bottom: 40px;
@@ -878,174 +745,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--Produkte---------------------------------------------------------------------------------------->
 
 
-<section id="ZweiSpalten">
-	<div class="container">
-		<div class="row"> 
+
 
 <!--Produkte shampoo---------------------------------------------------------------------------------------->		
 
+<div class="carousel">
+        <div class="carousel-products">
+           
+            <div class="product">
+                <img src="img/shampoo.png" alt="Produkt 1">
+                <h3>Produkt 1</h3>
+                <p>Beschreibung 1</p>
+            </div>
+            <div class="product">
+                <img src="img/conditioner1.png" alt="Produkt 2">
+                <h3>Produkt 2</h3>
+                <p>Beschreibung 2</p>
+            </div>
+            <div class="product">
+                <img src="img/shampoo2.png" alt="Produkt 3">
+                <h3>Produkt 3</h3>
+                <p>Beschreibung 3</p>
+            </div>
+            <div class="product">
+                <img src="img/conditioner2.png" alt="Produkt 4">
+                <h3>Produkt 4</h3>
+                <p>Beschreibung 4</p>
+            </div>
+            <div class="product">
+                <img src="img/shampoo3.png" alt="Produkt 5">
+                <h3>Produkt 5</h3>
+                <p>Beschreibung 5</p>
+            </div>
+            <div class="product">
+                <img src="conditioner3.png" alt="Produkt 6">
+                <h3>Produkt 6</h3>
+                <p>Beschreibung 6</p>
+            </div>
+        </div>
+        <button class="carousel-button prev">⬅</button>
+        <button class="carousel-button next">➡</button>
+    </div>
 
-<div class="col-sm-6">
-  <div id="shampoo">
-    <!-- Shampoo-Bild mit Tracking und Hover-Effekt -->
-    <img 
-      class="img-rounded hover-effect" 
-      src="img/shampoo.png" 
-      alt="Shampooflasche" 
-      id="img-shampoo" 
-      onclick="trackSelectItemShampoo()">
-      
-    <div id="LinksTexte">
-      <div class="Textundicon">
-        <h1>Shampoo</h1>
-        <!-- Warenkorb, unverändert -->
-        <a href="#Warenkorb" class="trackable-bag" onclick="trackAddToCart()">
-          <img src="img/bag.png" alt="Icon grüner Warenkorb" width="50" class="bagicon" id="links">
-        </a>
+    <script>
+       
+        const products = document.querySelector('.carousel-products');
+        const totalProducts = products.children.length; 
+        const productsToShow = 2; 
+        const totalSlides = Math.ceil(totalProducts / productsToShow); 
+        let index = 0;
+
         
-        <script>
-          function trackAddToCart() {
-            gtag('event', 'add_to_cart', {
-              'event_category': 'E-Commerce',
-              'event_label': 'Warenkorb Klick',
-              'value': 1
-            });
-            console.log('Tracking: add_to_cart ausgelöst');
-          }
-        </script>
-      </div>
+        document.querySelector('.next').addEventListener('click', () => {
+            index = (index + 1) % totalSlides; 
+            updateCarousel();
+        });
 
-      <p>Cherry blossom</p>
-      <p>350 ml</p>
-      <p>4,95€</p>
-    </div>
-  </div>
-</div>
+       
+        document.querySelector('.prev').addEventListener('click', () => {
+            index = (index - 1 + totalSlides) % totalSlides; 
+            updateCarousel();
+        });
 
-<!-- Tracking-Funktion für das Shampoo-Bild -->
-<script>
-  function trackSelectItemShampoo() {
-    gtag('event', 'select_item', {
-      'event_name': 'E-Commerce'
-    });
-    console.log('Tracking: select_item für Shampoo ausgelöst');
-  }
-</script>
-<!--Conditioner----------------------------------------------------------------------------------------->	
+        function updateCarousel() {
+            
+            products.style.transform = ⁠ translateX(-${index * 100}%) ⁠;
+        }
 
 
-			
-			<div class="col-sm-6">											
-  <div id="conditioner">
-   
-    <!-- Conditioner-Bild mit Tracking -->
-    <img 
-      class="img-rounded hover-effect" 
-      src="img/conditioner1.png" 
-      alt="Conditionerflasche" 
-      id="img-conditioner" 
-      onclick="trackSelectItemConditioner()">
-
-    <div id="RechtsTexte">
-      <div class="Textundicon">
-        <h1>Conditioner</h1>
-        <!-- Warenkorb, unverändert -->
-        <a href="#Warenkorb" class="trackable-bag" onclick="trackAddToCartRight()">
-          <img src="img/bag2.png" alt="icon grüner Warenkorb" width="50" class="bagicon" id="rechts">
-        </a>
-
-        <script>
-          function trackAddToCartRight() {
-            gtag('event', 'add_to_cart', {
-              'event_category': 'E-Commerce',
-              'event_label': 'Warenkorb Rechts',
-              'value': 1
-            });
-            console.log('Tracking: add_to_cart für rechten Warenkorb ausgelöst');
-          }
-        </script>
-      </div>
-
-      <p>Cherry blossom</p>
-      <p>350 ml</p>
-      <p>4,95€</p>
-    </div>
-  </div>
-</div>
-
-<!-- Tracking-Funktion für das Conditioner-Bild -->
-<script>
-  function trackSelectItemConditioner() {
-    gtag('event', 'select_item', {
-      'event_name': 'E-Commerce'
-    });
-    console.log('Tracking: select_item für Conditioner ausgelöst');
-  }
-</script>
-<!--Pfeile----------------------------------------------------------------------------------------->	
-			<div class="product-navigation">
-
-				<a href="#Warenkorb">
-			  <button><img src="img/Pfeillinks.png" alt="Pfeil der nach links zeigt" class="arrow left-arrow"> </button>
-			    </a>
-			    
-			    <a href="#Warenkorb">
-			   <button><img src="img/Pfeilrechts.png" alt="pfeil der nach rechts zeigt"class="arrow right-arrow"> </button>
-				</a>
-			</div>
-<!---->
-
-		</div>
-	</div>
-</section>
-		
-
-
-	
-<!--Produkt Eigenschaften---------------------------------------------------------------------------------------->
-
-
-<section id="DreiSpalten">			
-  <div class="container">
-    <section class="mitte"> 
-      <div id="Benefits"> <!-- Benefits Überschrift -->
-        <h1>Benefits</h1>
-      </div>
-    </section>
-
-    <div class="row"> 
-      <!-- Nachhaltig -->
-      <div class="col-sm-4">
-        <div id="Nachhaltig">
-          <img src="img/nachhaltig.jpg" alt="Bild von Blättern">
-          <a href="#ZweiSpalten">
-            <button class="centered-button" onclick="trackSelectContent('nachhaltig')">nachhaltig</button>
-          </a>
-        </div>
-      </div>
-
-      <!-- Tierversuchsfrei -->
-      <div class="col-sm-4">
-        <div id="Tierversuchsfrei">
-          <img src="img/tierversuchsfrei.png" alt="Bild von pinken Seifenblasen">
-          <a href="#ZweiSpalten">
-            <button class="centered-button" onclick="trackSelectContent('tierversuchsfrei')">tierversuchsfrei</button>
-          </a>
-        </div>
-      </div>
-
-      <!-- Pflegend -->
-      <div class="col-sm-4">
-        <div id="Pflegend">
-          <img src="img/pflegend.jpg" alt="Bild einer Haarewaschenden Frau">
-          <a href="#ZweiSpalten">
-            <button class="centered-button" onclick="trackSelectContent('pflegend')">pflegend</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!--Über uns---------------------------------------------------------------------------------------->
 	
@@ -1129,33 +896,6 @@ effektiv pflegen und schützend.</p>
 		</div>
 	</div>
 </section>	
-
-
-<section class="mitte">
-        <h1> Presse </h1>                                                <!--Unsere Produkte Überschrift-->
-        </section>
-
-<!--presse logos-->
-
-    <div class="col-sm-4">
-                <div id="logos">
-
-                    <img src="img/logo1.png" alt="Logo 1" id="logo1">
-        <img src="img/logo2.png" alt="Logo 2" id="logo2">
-    <img src="img/logo3.png" alt="Logo 3" id="logo3">
-    <img src="img/logo4.png" alt="Logo 4" id="logo4">
-    <img src="img/logo5.png" alt="Logo 5" id="logo5">
-    <img src="img/logo6.jpg" alt="Logo 6" id="logo6">
-    <img src="img/logo7.png" alt="Logo 7" id="logo7">
-    <img src="img/logo8.png" alt="Logo 8" id="logo8">
-
-
-                </div>
-            </div>
-        </div>
-
-</section>
-
 		
 <!--Footer---------------------------------------------------------------------------------------->	
 
@@ -1200,7 +940,6 @@ effektiv pflegen und schützend.</p>
 			</div>
 		</div>
 		<p>Copyright © 2024/2025 Siirencare | designed by Gruppe 7 </p>
-
 	
 </footer>
 
@@ -1209,5 +948,7 @@ effektiv pflegen und schützend.</p>
 
 
 <script src="script.js" defer></script>
+</style>
+
 </body>
 </html>
